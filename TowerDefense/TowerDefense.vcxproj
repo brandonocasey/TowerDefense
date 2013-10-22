@@ -75,12 +75,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="GameLog.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseGameState.h" />
+    <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="GameLog.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md" />
     <None Include="libs\libjpeg-9.dll" />
     <None Include="libs\libpng16-16.dll" />
     <None Include="libs\libtiff-5.dll" />
