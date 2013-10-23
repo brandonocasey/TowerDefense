@@ -3,6 +3,7 @@
 #include <iostream>				// cout, cin, etc
 #include <ostream>				// control what output stream to print to, an actual LOG file , STDOUT, etc
 #include <string>				// Enable string data types
+#include <vector>
 
 // Safely delete pointers, arrays of points, and release memory and such from the heap (dynamic memory)
 #ifndef SAFE_DELETE

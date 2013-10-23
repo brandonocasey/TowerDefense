@@ -77,12 +77,16 @@
   <ItemGroup>
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameLog.cpp" />
+    <ClCompile Include="Intro.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseGameState.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameLog.h" />
+    <ClInclude Include="Intro.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +98,9 @@
     <None Include="libs\SDL2.dll" />
     <None Include="libs\SDL2_image.dll" />
     <None Include="libs\zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img\logo.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

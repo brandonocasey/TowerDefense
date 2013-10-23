@@ -1,15 +1,18 @@
 #include "GameEngine.h"
+#include "Intro.h"
  
 int main ( int argc, char** argv )
 {
     GameEngine game;
 
-    // initialize the engine
-    game.Init( "Engine Test v1.0", 400, 400, false );
-
-    return 1;
+    // initialize the engine, if there is an error return 1 for failure
+    if( game.Init( "Engine Test v1.0", 600, 600, true ) )
+    {
+        return 1;
+    }
+    
     // load the intro
-/*    game.ChangeState( IntroState::Instance() );
+    game.ChangeState( Intro::Instance() );
 
     // main loop
     while ( game.Running() )
@@ -20,5 +23,4 @@ int main ( int argc, char** argv )
     // cleanup the engine
     game.Cleanup();
     return 0;
-    */
 }

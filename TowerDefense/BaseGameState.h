@@ -6,6 +6,7 @@
 class BaseGameState
 {
     public:
+        std::string m_sName;
         virtual void Init() = 0;
         virtual void Cleanup() = 0;
 
@@ -23,6 +24,7 @@ class BaseGameState
 
     protected:
         BaseGameState() { } // Constructor
+        GameLog logger;
 };
 
 #endif
