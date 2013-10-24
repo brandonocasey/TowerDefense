@@ -6,7 +6,7 @@ int main ( int argc, char** argv )
     GameEngine game;
 
     // initialize the engine, if there is an error return 1 for failure
-    if( game.Init( "Engine Test v1.0", 600, 600, true ) )
+    if( game.Init( "Tower Defense Test v1.0", 600, 600, false ) )
     {
         return 1;
     }

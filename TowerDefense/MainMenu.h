@@ -1,7 +1,9 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
 
+#include "utils.h"
 #include "BaseGameState.h"
+#include "MenuItem.h"
 
 class MainMenu : public BaseGameState
 {
@@ -16,6 +18,7 @@ class MainMenu : public BaseGameState
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
 
+        bool CheckMouse(MenuItem box, int mouse_x, int mouse_y);
         static MainMenu* Instance()
         {
             return &m_MainMenu;
@@ -26,7 +29,7 @@ class MainMenu : public BaseGameState
 
     private:
         static MainMenu m_MainMenu;
-        SDL_Surface* bg;
+        std::vector<MenuItem> m_vMenuItems;
         GameLog logger;
 };
 

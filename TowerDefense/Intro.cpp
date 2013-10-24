@@ -1,6 +1,6 @@
 #include "Intro.h"
 
-const int LOGO_SECONDS = 5; 
+const int LOGO_SECONDS = 5;
 // Singleton Yeah!
 Intro Intro::m_Intro;
 
@@ -51,15 +51,27 @@ void Intro::HandleEvents(GameEngine* game)
 {
 	SDL_Event event;
 
+    // foreach menuitem
+    // if mosue within menu item
+    // currentTexture = rollover
+    // if mouse leaves menu item
+    // currentTexture = normal
+    // if mouse clicks menu item
+    // currentTexture = clicked
+    // preform action
 	if (SDL_PollEvent(&event))
     {
 		switch (event.type)
         {
+            // If they hit the close window button
 			case SDL_QUIT:
 				game->Quit();
 				break;
 
+            // If they hit a key we change to the press start state
 			case SDL_KEYDOWN:
+            case SDL_MOUSEBUTTONDOWN:
+                logger.Log("User has skipped intro");
 			    game->ChangeState(MainMenu::Instance());
 				break;
 		}
@@ -87,7 +99,7 @@ bool Intro::TimerOver()
     return true;
 }
 
-void Intro::Update(GameEngine* game) 
+void Intro::Update(GameEngine* game)
 {
     // Count Down to 0 for image change
     // Draw the current image
@@ -118,7 +130,7 @@ void Intro::Update(GameEngine* game)
 
 }
 
-void Intro::Draw(GameEngine* game) 
+void Intro::Draw(GameEngine* game)
 {
     int w;
     int h;

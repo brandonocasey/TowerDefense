@@ -1,10 +1,28 @@
-﻿  Intro.cpp
+﻿  MenuItem.cpp
+  GameEngine.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+  MainMenu.cpp
+  Intro.cpp
+  Generating Code...
   TowerDefense.vcxproj -> E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\Debug\TowerDefense.exe
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libFLAC-8.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libfreetype-6.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libjpeg-9.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libmikmod-2.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libmodplug-1.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libogg-0.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libpng16-16.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libtiff-5.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libvorbis-0.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libvorbisfile-3.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libwebp-4.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_image.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_mixer.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_net.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_ttf.dll
+  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\smpeg2.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\zlib1.dll
-  7 File(s) copied
+  18 File(s) copied

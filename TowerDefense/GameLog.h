@@ -1,3 +1,6 @@
+#ifndef GAMELOG_H
+#define GAMELOG_H
+
 #include <ostream>
 #include <string>
 #include <iostream>
@@ -14,3 +17,5 @@ class GameLog
         void LogError(const std::string &msg);
         // void getLogger(); for singleton
 };
+
+#endif

@@ -19,6 +19,15 @@
     <Filter Include="Source Files\Classes">
       <UniqueIdentifier>{19336c1b-abf2-4dd6-b86d-54d13faa2711}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\libs">
+      <UniqueIdentifier>{fd1b3e5d-6450-4d7f-b1ff-189982861ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{8e98c57f-c637-4860-b579-45e48c8bf48e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\fonts">
+      <UniqueIdentifier>{b8b9c472-3553-4b9d-9bb7-759223a6e3f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,6 +43,9 @@
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="GameLog.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuItem.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,36 +68,77 @@
     <ClInclude Include="GameLog.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="MenuItem.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libs\libjpeg-9.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\libpng16-16.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\libtiff-5.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\libwebp-4.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\SDL2.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\SDL2_image.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\zlib1.dll">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\README.md">
       <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libs\libFLAC-8.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libfreetype-6.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libjpeg-9.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libmikmod-2.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libmodplug-1.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libogg-0.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libpng16-16.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libtiff-5.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libvorbis-0.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libvorbisfile-3.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\libwebp-4.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\SDL2.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\SDL2_image.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\SDL2_mixer.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\SDL2_net.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\SDL2_ttf.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\smpeg2.dll">
+      <Filter>Resource Files\libs</Filter>
+    </None>
+    <None Include="libs\zlib1.dll">
+      <Filter>Resource Files\libs</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="img\logo.jpg">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\img</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\SourceSansPro-Regular.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

@@ -51,7 +51,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>E:\libs\SDL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_net.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y "$(ProjectDir)libs\*.dll" "$(OutDir)"</Command>
@@ -80,6 +80,7 @@
     <ClCompile Include="Intro.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MenuItem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseGameState.h" />
@@ -87,20 +88,35 @@
     <ClInclude Include="GameLog.h" />
     <ClInclude Include="Intro.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MenuItem.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+    <None Include="libs\libFLAC-8.dll" />
+    <None Include="libs\libfreetype-6.dll" />
     <None Include="libs\libjpeg-9.dll" />
+    <None Include="libs\libmikmod-2.dll" />
+    <None Include="libs\libmodplug-1.dll" />
+    <None Include="libs\libogg-0.dll" />
     <None Include="libs\libpng16-16.dll" />
     <None Include="libs\libtiff-5.dll" />
+    <None Include="libs\libvorbis-0.dll" />
+    <None Include="libs\libvorbisfile-3.dll" />
     <None Include="libs\libwebp-4.dll" />
     <None Include="libs\SDL2.dll" />
     <None Include="libs\SDL2_image.dll" />
+    <None Include="libs\SDL2_mixer.dll" />
+    <None Include="libs\SDL2_net.dll" />
+    <None Include="libs\SDL2_ttf.dll" />
+    <None Include="libs\smpeg2.dll" />
     <None Include="libs\zlib1.dll" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="img\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\SourceSansPro-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,23 +4,24 @@
 
 class BaseGameState; // So that we can fill out vector
 
-#include <vector>
-#include <iostream>
-#include <SDL2/SDL.h>			// SDL OpenGL Framework
-#include <SDL2/SDL_image.h>		// An SDL2 extension that enables different image formats
-#include "GameLog.h"
+#include "utils.h"
 
 class GameEngine
 {
     public:
-
+        int m_iScreenHeight;
+        int m_iScreenWidth;
         // Creating and destroying the state machine
         int Init(const char* title, int width, int height, bool fullscreen);
         void Cleanup();
 
         // Things that will need to be controlled in the options menu
         void ToggleFullScreen();
+        void ToggleFullScreen(bool fullscreen);
         void ResizeWindow(int width, int height);
+        void ChangeVolumeLevel(int level);
+        void ChangeBrightness(int level);
+        void ClearSaveData();
 
         //For use inbetween screens
         void ClearScreen();
