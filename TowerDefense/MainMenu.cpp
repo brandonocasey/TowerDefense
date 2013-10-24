@@ -9,21 +9,18 @@ void MainMenu::Init()
     logger.Init(LOGFILE, m_sName, 5);
 
     m_vMenuItems.push_back( MenuItem(1, 1, 100, 100, "New Game") );
-    m_vMenuItems.push_back( MenuItem(1, 1, 1, 1, "Load Game") );
-    m_vMenuItems.push_back( MenuItem(1, 1, 1, 1, "Settings") );
-    m_vMenuItems.push_back( MenuItem(1, 1, 1, 1, "Quit") );
-
-	//SDL_Surface* temp = SDL_LoadBMP("menu.bmp");
-
-	//bg = SDL_DisplayFormat(temp);
-
-	//SDL_FreeSurface(temp);
-
-	//printf("CMenuState Init\n");
+    m_vMenuItems.push_back( MenuItem(100, 100, 100, 100, "Load Game") );
+    m_vMenuItems.push_back( MenuItem(200, 200, 100, 100, "Settings") );
+    m_vMenuItems.push_back( MenuItem(300, 300, 100, 100, "Quit") );
 }
 
 void MainMenu::Cleanup()
 {
+    while( ! m_vMenuItems.empty() )
+    {
+        m_vMenuItems.back().Cleanup();
+        m_vMenuItems.pop_back();
+    }
 }
 
 void MainMenu::Pause()
@@ -43,11 +40,14 @@ void MainMenu::HandleEvents(GameEngine* game)
 
      for(MenuItem it : m_vMenuItems)
     {
-        if( CheckMouse(it, mouse_x, mouse_y) )
+        if( CheckMouse(it, mouse_x, mouse_y)  )
         {
-            //logger.Log( "Mouse is currenty over " + it.GetName() );
             //it.MouseOver();
         }
+        //else if( ! CheckMouse(it, mouse_x, mouse_y) && it.m_bMouseOnTop)
+        //{
+           // it.MouseOut();
+        //}
     }
 	if (SDL_PollEvent(&event))
     {
@@ -105,6 +105,11 @@ void MainMenu::Draw(GameEngine* game)
 {
     for(MenuItem it : m_vMenuItems)
     {
-        //logger.Log("Draw Menu Items: " + it.GetName() );
+        SDL_Texture *texture = SDL_CreateTextureFromSurface(game->m_cRenderer, it.m_cCurrentSurface);
+        SDL_Rect current_position = it.GetCollisionRect();
+        SDL_RenderCopy(game->m_cRenderer, texture, NULL, &current_position );
+        SDL_RenderPresent(game->m_cRenderer);
+
+        SDL_DestroyTexture(texture);
     }
 }

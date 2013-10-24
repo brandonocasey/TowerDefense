@@ -93,14 +93,12 @@ void GameEngine::Cleanup()
         ToggleFullScreen();
     }
 
-
-    //SDL_DestroyTexture(tex);
-
     SDL_DestroyRenderer(m_cRenderer);
     SDL_DestroyWindow(m_cWindow);
 
     IMG_Quit();
     SDL_Quit();
+    TTF_Quit();
 }
 
 void GameEngine::ChangeState(BaseGameState* state)

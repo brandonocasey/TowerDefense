@@ -25,5 +25,5 @@
 
 // Constants
 #define LOGFILE std::cout
-
+#define MENU_FONT "fonts/SourceSansPro-Regular.ttf"
 #endif
