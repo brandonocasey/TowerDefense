@@ -10,7 +10,7 @@ class MenuItem
 {
     public:
         // in our constructor we store the function that we need to run when we are selected
-       // MenuItem( int x, int y, int h, int w, std::string name,  void (MainMenu::*action_function)(GameEngine* game) );
+        //MenuItem( int x, int y, int h, int w, std::string name,  void (MainMenu::*action_function)(GameEngine* game) );
         MenuItem( int x, int y, int h, int w, std::string name );
 
         void SetAction();
@@ -25,7 +25,7 @@ class MenuItem
         bool CheckMouse(int mouse_x, int mouse_y);
     private:
 
-        void (*MainMenu::*m_fAction)(GameEngine* game);
+        //void (*m_fAction)(GameEngine* game);
         bool m_bSelected;
         void SetCurrentSurface(SDL_Color font_color );
         void SetCurrentSurface();

@@ -32,6 +32,7 @@ void MainMenu::Pause()
 
 void MainMenu::Resume()
 {
+    Init();
 }
 
 void MainMenu::HandleEvents(GameEngine* game)
@@ -53,7 +54,23 @@ void MainMenu::HandleEvents(GameEngine* game)
                     if( it->IsSelected() )
                     {
                         logger.Log( "Mouse clicked " + it->GetName() );
-                        it->Action(game);
+                        if( it->GetName() == "Quit" )
+                        {
+                            game->Quit();
+                        }
+                        else if( it->GetName() == "New Game" )
+                        {
+                            game->PushState(NewGame::Instance());
+                        }
+                        else if( it->GetName() == "Load Game" )
+                        {
+                            game->PushState(LoadGame::Instance());
+                        }
+                        else if( it->GetName() == "Settings" )
+                        {
+                            game->PushState(Settings::Instance());
+                        }
+                        //it->Action(game);
                     }
                 }
                 break;

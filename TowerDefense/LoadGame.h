@@ -1,18 +1,13 @@
-#ifndef MAINMENU_H
-#define MAINMENU_H
+#ifndef LOADGAME_H
+#define LOADGAME_H
 
 #include "utils.h"
 #include "BaseGameState.h"
-#include "NewGame.h"
-#include "Settings.h"
-#include "LoadGame.h"
+#include "MenuItem.h"
 
-class MenuItem;
-
-class MainMenu : public BaseGameState
+class LoadGame : public BaseGameState
 {
     public:
-        void Quit(GameEngine* game);
         void Init();
         void Cleanup();
 
@@ -23,16 +18,16 @@ class MainMenu : public BaseGameState
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
 
-        static MainMenu* Instance()
+        static LoadGame* Instance()
         {
-            return &m_MainMenu;
+            return &m_LoadGame;
         }
 
     protected:
-        MainMenu() { }
+        LoadGame() { }
 
     private:
-        static MainMenu m_MainMenu;
+        static LoadGame m_LoadGame;
         std::vector<MenuItem*> m_vMenuItems;
         GameLog logger;
 };

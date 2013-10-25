@@ -87,9 +87,12 @@
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameLog.h" />
     <ClInclude Include="Intro.h" />
+    <ClInclude Include="LoadGame.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MenuItem.h" />
+    <ClInclude Include="NewGame.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Settings.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>

@@ -22,7 +22,7 @@ MenuItem::MenuItem( int x, int y, int h, int w, std::string name )
 void MenuItem::Action(GameEngine* game)
 {
     // Stored action function to run when clicked
-   //&m_fAction(game);
+   //m_fAction(game);
 }
 void MenuItem::Selected()
 {
