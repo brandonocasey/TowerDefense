@@ -1,10 +1,8 @@
-#define LOGFILE std::cout
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 
-class BaseGameState; // So that we can fill out vector
-
 #include "utils.h"
+class BaseGameState; // Forward decleration so that we can use BaseGameState in two places
 
 class GameEngine
 {

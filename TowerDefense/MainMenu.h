@@ -3,11 +3,12 @@
 
 #include "utils.h"
 #include "BaseGameState.h"
-#include "MenuItem.h"
+class MenuItem;
 
 class MainMenu : public BaseGameState
 {
     public:
+        void Quit(GameEngine* game);
         void Init();
         void Cleanup();
 
@@ -18,7 +19,6 @@ class MainMenu : public BaseGameState
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
 
-        bool CheckMouse(MenuItem box, int mouse_x, int mouse_y);
         static MainMenu* Instance()
         {
             return &m_MainMenu;
@@ -29,7 +29,7 @@ class MainMenu : public BaseGameState
 
     private:
         static MainMenu m_MainMenu;
-        std::vector<MenuItem> m_vMenuItems;
+        std::vector<MenuItem*> m_vMenuItems;
         GameLog logger;
 };
 

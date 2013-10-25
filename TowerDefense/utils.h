@@ -15,10 +15,10 @@
 // Safely delete pointers, arrays of points, and release memory and such from the heap (dynamic memory)
 #ifndef SAFE_DELETE
 #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=nullptr; } }
-#endif   
+#endif
 #ifndef SAFE_DELETE_ARRAY
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=nullptr; } }
-#endif   
+#endif
 #ifndef SAFE_RELEASE
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=nullptr; } }
 #endif
@@ -26,4 +26,5 @@
 // Constants
 #define LOGFILE std::cout
 #define MENU_FONT "fonts/SourceSansPro-Regular.ttf"
+#define LOG_LEVEL 5
 #endif

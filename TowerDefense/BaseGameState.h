@@ -2,6 +2,7 @@
 #define BASEGAMESTATE_H
 
 #include "GameEngine.h"
+#include "utils.h"
 
 class BaseGameState
 {

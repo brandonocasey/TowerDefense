@@ -1,5 +1,5 @@
 #include "MainMenu.h"
-
+#include "MenuItem.h"
 // Singleton Yeah!
 MainMenu MainMenu::m_MainMenu;
 
@@ -8,17 +8,20 @@ void MainMenu::Init()
     m_sName = "MainMenu";
     logger.Init(LOGFILE, m_sName, 5);
 
-    m_vMenuItems.push_back( MenuItem(1, 1, 100, 100, "New Game") );
-    m_vMenuItems.push_back( MenuItem(100, 100, 100, 100, "Load Game") );
-    m_vMenuItems.push_back( MenuItem(200, 200, 100, 100, "Settings") );
-    m_vMenuItems.push_back( MenuItem(300, 300, 100, 100, "Quit") );
+
+
+    m_vMenuItems.push_back( new MenuItem(100, 100, 100, 100, "New Game") );
+    m_vMenuItems.push_back( new MenuItem(100, 200, 100, 100, "Load Game") );
+    m_vMenuItems.push_back( new MenuItem(100, 300, 100, 100, "Settings") );
+    m_vMenuItems.push_back( new MenuItem(100, 400, 100, 100, "Quit") );
+    //m_vMenuItems.push_back( new MenuItem(100, 400, 100, 100, "Quit", &MainMenu::Quit) );
 }
 
 void MainMenu::Cleanup()
 {
     while( ! m_vMenuItems.empty() )
     {
-        m_vMenuItems.back().Cleanup();
+        m_vMenuItems.back()->Cleanup();
         m_vMenuItems.pop_back();
     }
 }
@@ -34,21 +37,7 @@ void MainMenu::Resume()
 void MainMenu::HandleEvents(GameEngine* game)
 {
 	SDL_Event event;
-    int mouse_x = 0;
-    int mouse_y = 0;
-    SDL_GetMouseState(&mouse_x, &mouse_y);
 
-     for(MenuItem it : m_vMenuItems)
-    {
-        if( CheckMouse(it, mouse_x, mouse_y)  )
-        {
-            //it.MouseOver();
-        }
-        //else if( ! CheckMouse(it, mouse_x, mouse_y) && it.m_bMouseOnTop)
-        //{
-           // it.MouseOut();
-        //}
-    }
 	if (SDL_PollEvent(&event))
     {
 		switch (event.type)
@@ -58,12 +47,13 @@ void MainMenu::HandleEvents(GameEngine* game)
 				break;
 
             case SDL_MOUSEBUTTONDOWN:
-                for(MenuItem it : m_vMenuItems)
+                for(MenuItem *it : m_vMenuItems)
                 {
-                    if( CheckMouse(it, mouse_x, mouse_y) )
+                    // If in selected state then we know that they clicked
+                    if( it->IsSelected() )
                     {
-                        logger.Log( "Mouse clicked " + it.GetName() );
-                        //it.Action();
+                        logger.Log( "Mouse clicked " + it->GetName() );
+                        it->Action(game);
                     }
                 }
                 break;
@@ -72,6 +62,7 @@ void MainMenu::HandleEvents(GameEngine* game)
                 {
 					case SDLK_ESCAPE:
                         game->Quit();
+
 						//game->PopState();
 						break;
 				}
@@ -80,34 +71,41 @@ void MainMenu::HandleEvents(GameEngine* game)
 	}
 }
 
-bool MainMenu::CheckMouse(MenuItem box, int mouse_x, int mouse_y)
+void MainMenu::Quit(GameEngine* game)
 {
-    SDL_Rect collision = box.GetCollisionRect();
-
-    if( ( mouse_x > collision.x ) && ( mouse_x < collision.x + collision.w ) && ( mouse_y > collision.y ) && ( mouse_y < collision.y + collision.h ) )
-    {
-        return true;
-    }
-
-    return false;
+    game->Quit();
 }
 
-void MainMenu::Update(GameEngine* game) 
+void MainMenu::Update(GameEngine* game)
 {
-    // vectors start at 1
-    for(MenuItem it : m_vMenuItems)
+     for(MenuItem *it : m_vMenuItems)
     {
-        //logger.Log("Update Menu Items: " + it.GetName() );
+        int mouse_x = 0;
+        int mouse_y = 0;
+        SDL_GetMouseState(&mouse_x, &mouse_y);
+        // if our mouse is not over the button but set to hover state
+        // unselect it
+        if( ! it->CheckMouse(mouse_x, mouse_y) && it->IsSelected() )
+        {
+            logger.Log("Mouse has left " + it->GetName() );
+            it->UnSelected();
+        }
+        // Otherwise if it is hovered over, set to selected state
+        if( it->CheckMouse(mouse_x, mouse_y ) )
+        {
+            logger.Log("Mouse has Entered "  + it->GetName() );
+            it->Selected();
+        }
     }
 }
 
-void MainMenu::Draw(GameEngine* game) 
+void MainMenu::Draw(GameEngine* game)
 {
-    for(MenuItem it : m_vMenuItems)
+    for(MenuItem *it : m_vMenuItems)
     {
-        SDL_Texture *texture = SDL_CreateTextureFromSurface(game->m_cRenderer, it.m_cCurrentSurface);
-        SDL_Rect current_position = it.GetCollisionRect();
-        SDL_RenderCopy(game->m_cRenderer, texture, NULL, &current_position );
+        SDL_Texture *texture = SDL_CreateTextureFromSurface(game->m_cRenderer, it->m_cCurrentSurface);
+        SDL_Rect* current_position = &it->GetCollisionRect();
+        SDL_RenderCopy(game->m_cRenderer, texture, NULL, current_position );
         SDL_RenderPresent(game->m_cRenderer);
 
         SDL_DestroyTexture(texture);

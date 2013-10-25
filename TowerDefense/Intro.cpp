@@ -51,14 +51,6 @@ void Intro::HandleEvents(GameEngine* game)
 {
 	SDL_Event event;
 
-    // foreach menuitem
-    // if mosue within menu item
-    // currentTexture = rollover
-    // if mouse leaves menu item
-    // currentTexture = normal
-    // if mouse clicks menu item
-    // currentTexture = clicked
-    // preform action
 	if (SDL_PollEvent(&event))
     {
 		switch (event.type)

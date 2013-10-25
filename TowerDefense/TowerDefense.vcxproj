@@ -89,6 +89,7 @@
     <ClInclude Include="Intro.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MenuItem.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <Font Include="fonts\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TowerDefense.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
