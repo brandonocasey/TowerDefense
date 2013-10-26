@@ -49,7 +49,7 @@ void MainMenu::LoadGameCallback(GameEngine* game)
 
 void MainMenu::NewGameCallback(GameEngine* game)
 {
-    game->ChangeState( NewGame::Instance() );
+    //game->ChangeState( NewGame::Instance() );
 }
 
 void MainMenu::SettingsCallback(GameEngine* game)
