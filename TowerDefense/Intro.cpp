@@ -37,14 +37,14 @@ void Intro::Cleanup()
     }
 }
 
-void Intro::Pause()
+void Intro::Pause(GameEngine* game)
 {
-    // Not Needed for this state
+    game->ClearScreen();
 }
 
-void Intro::Resume()
+void Intro::Resume(GameEngine* game)
 {
-    // Not Needed for this state
+    Init();
 }
 
 void Intro::HandleEvents(GameEngine* game)
@@ -64,7 +64,7 @@ void Intro::HandleEvents(GameEngine* game)
 			case SDL_KEYDOWN:
             case SDL_MOUSEBUTTONDOWN:
                 logger.Log("User has skipped intro");
-			    game->ChangeState(MainMenu::Instance());
+			    NextState(game);
 				break;
 		}
 	}
@@ -116,10 +116,15 @@ void Intro::Update(GameEngine* game)
     }
     else if( TimerOver() &&  m_vBackgrounds.empty() )
     {
-        game->ChangeState( MainMenu::Instance() );
+        NextState(game);
     }
     m_iCountdownStart = SDL_GetTicks();
 
+}
+
+void Intro::NextState(GameEngine* game)
+{
+    game->PushState( MainMenu::Instance() );
 }
 
 void Intro::Draw(GameEngine* game)

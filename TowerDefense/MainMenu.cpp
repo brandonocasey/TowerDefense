@@ -10,11 +10,11 @@ void MainMenu::Init()
 
 
 
-    m_vMenuItems.push_back( new MenuItem(100, 100, 100, 100, "New Game") );
-    m_vMenuItems.push_back( new MenuItem(100, 200, 100, 100, "Load Game") );
-    m_vMenuItems.push_back( new MenuItem(100, 300, 100, 100, "Settings") );
-    m_vMenuItems.push_back( new MenuItem(100, 400, 100, 100, "Quit") );
-    //m_vMenuItems.push_back( new MenuItem(100, 400, 100, 100, "Quit", &MainMenu::Quit) );
+    m_vMenuItems.push_back( new MenuItem("New Game", boost::bind(&MainMenu::NewGameCallback, this, _1) ) );
+    m_vMenuItems.push_back( new MenuItem("Load Game", boost::bind(&MainMenu::LoadGameCallback, this, _1) ) );
+    m_vMenuItems.push_back( new MenuItem("Settings", boost::bind(&MainMenu::SettingsCallback, this, _1) ) );
+    m_vMenuItems.push_back( new MenuItem("Quit", boost::bind(&MainMenu::QuitCallback, this, _1) ) );
+
 }
 
 void MainMenu::Cleanup()
@@ -26,14 +26,36 @@ void MainMenu::Cleanup()
     }
 }
 
-void MainMenu::Pause()
+void MainMenu::Pause(GameEngine* game)
 {
+    game->ClearScreen();
 }
 
-void MainMenu::Resume()
+void MainMenu::Resume(GameEngine* game)
 {
     Init();
 }
+
+void MainMenu::QuitCallback(GameEngine* game)
+{
+    game->Quit();
+}
+
+void MainMenu::LoadGameCallback(GameEngine* game)
+{
+    game->Quit();
+}
+
+void MainMenu::NewGameCallback(GameEngine* game)
+{
+    game->Quit();
+}
+
+void MainMenu::SettingsCallback(GameEngine* game)
+{
+    game->PushState( Settings::Instance() );
+}
+
 
 void MainMenu::HandleEvents(GameEngine* game)
 {
@@ -50,37 +72,15 @@ void MainMenu::HandleEvents(GameEngine* game)
             case SDL_MOUSEBUTTONDOWN:
                 for(MenuItem *it : m_vMenuItems)
                 {
-                    // If in selected state then we know that they clicked
-                    if( it->IsSelected() )
-                    {
-                        logger.Log( "Mouse clicked " + it->GetName() );
-                        if( it->GetName() == "Quit" )
-                        {
-                            game->Quit();
-                        }
-                        else if( it->GetName() == "New Game" )
-                        {
-                            game->PushState(NewGame::Instance());
-                        }
-                        else if( it->GetName() == "Load Game" )
-                        {
-                            game->PushState(LoadGame::Instance());
-                        }
-                        else if( it->GetName() == "Settings" )
-                        {
-                            game->PushState(Settings::Instance());
-                        }
-                        //it->Action(game);
-                    }
+                    it->Callback(game);
                 }
                 break;
 			case SDL_KEYDOWN:
 				switch (event.key.keysym.sym)
                 {
 					case SDLK_ESCAPE:
-                        game->Quit();
 
-						//game->PopState();
+						game->PopState();
 						break;
 				}
 				break;
@@ -88,43 +88,33 @@ void MainMenu::HandleEvents(GameEngine* game)
 	}
 }
 
-void MainMenu::Quit(GameEngine* game)
-{
-    game->Quit();
-}
-
 void MainMenu::Update(GameEngine* game)
 {
      for(MenuItem *it : m_vMenuItems)
     {
-        int mouse_x = 0;
-        int mouse_y = 0;
-        SDL_GetMouseState(&mouse_x, &mouse_y);
-        // if our mouse is not over the button but set to hover state
-        // unselect it
-        if( ! it->CheckMouse(mouse_x, mouse_y) && it->IsSelected() )
-        {
-            logger.Log("Mouse has left " + it->GetName() );
-            it->UnSelected();
-        }
-        // Otherwise if it is hovered over, set to selected state
-        if( it->CheckMouse(mouse_x, mouse_y ) )
-        {
-            logger.Log("Mouse has Entered "  + it->GetName() );
-            it->Selected();
-        }
+        it->Update(game);
     }
 }
 
 void MainMenu::Draw(GameEngine* game)
 {
+    // Get Screen height / Menu Items
+    // Get Screen width / 2
+
+    int screen_width = 0;
+    int screen_height = 0;
+
+    game->GetWindowSize( &screen_width, &screen_height );
+
+    int x = 0;
+    int y = 0;
+    
     for(MenuItem *it : m_vMenuItems)
     {
-        SDL_Texture *texture = SDL_CreateTextureFromSurface(game->m_cRenderer, it->m_cCurrentSurface);
-        SDL_Rect* current_position = &it->GetCollisionRect();
-        SDL_RenderCopy(game->m_cRenderer, texture, NULL, current_position );
-        SDL_RenderPresent(game->m_cRenderer);
-
-        SDL_DestroyTexture(texture);
+        x = (screen_width /2) - (it->GetWidth() /2);
+        y += it->GetHeight();
+        it->Draw(game, x, y);
     }
+
+    SDL_RenderPresent(game->m_cRenderer);
 }

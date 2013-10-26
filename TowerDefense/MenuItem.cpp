@@ -1,46 +1,40 @@
 #include "MenuItem.h"
 #include "MainMenu.h"
 
-//MenuItem::MenuItem( int x, int y, int h, int w, std::string name, void (MainMenu::*action_function)(GameEngine* game) )
-MenuItem::MenuItem( int x, int y, int h, int w, std::string name )
+MenuItem::MenuItem( std::string name, boost::function<void(GameEngine* game)> action_function )
 {
+    logger.Init(LOGFILE, name, 5);
     m_bSelected = false;
-    m_cCurrentSurface = nullptr;
 
-    m_cCollision.x = x;
-    m_cCollision.y = y;
-    m_cCollision.w = w;
-    m_cCollision.h = h;
-
-    m_sName = name;
-    SetCurrentSurface();
+    m_sText = name;
 
     // Action function to run
-    //m_fAction = action_function;
-}
+    m_fMenuCallback = action_function;
 
-void MenuItem::Action(GameEngine* game)
-{
-    // Stored action function to run when clicked
-   //m_fAction(game);
-}
-void MenuItem::Selected()
-{
-    m_bSelected = true;
-    SDL_Color color = { 255, 0, 0 };
-    SetCurrentSurface(color);
-}
+    m_cFont = nullptr;
+    std::string font_file = MENU_FONT;
 
-bool MenuItem::IsSelected()
-{
-    return m_bSelected;
-}
 
-void MenuItem::UnSelected()
-{
-    m_bSelected = false;
+    m_cFont = TTF_OpenFont(font_file.c_str(), 24);
+    if( m_cFont == nullptr )
+    {
+        logger.LogError("There was an error loading the font");
+    }
+
+    m_cCurrentSurface = nullptr;
+
     SetCurrentSurface();
 }
+
+void MenuItem::Callback(GameEngine* game)
+{
+    // Stored action function to run when clicked
+    if( this->CheckMouse() )
+    {
+        m_fMenuCallback(game);
+    }
+}
+
 
 void MenuItem::SetCurrentSurface()
 {
@@ -48,43 +42,82 @@ void MenuItem::SetCurrentSurface()
     SetCurrentSurface(font_color);
 }
 
-void MenuItem::SetCurrentSurface(SDL_Color font_color )
+void MenuItem::SetCurrentSurface(SDL_Color font_color)
 {
     if(m_cCurrentSurface != nullptr)
     {
         SDL_FreeSurface(m_cCurrentSurface);
         m_cCurrentSurface = nullptr;
     }
-    TTF_Font *font = nullptr;
-    std::string font_file = MENU_FONT;
 
-    font = TTF_OpenFont(font_file.c_str(), 16);
-    m_cCurrentSurface = TTF_RenderText_Blended(font, m_sName.c_str(), font_color);
-
-    TTF_CloseFont(font);
+    m_cCurrentSurface = TTF_RenderText_Solid(m_cFont, m_sText.c_str(), font_color);
+    if( m_cCurrentSurface == nullptr )
+    {
+        logger.LogError("There was an error loading the surface");
+    }
 }
 
 void MenuItem::Cleanup()
 {
+    TTF_CloseFont(m_cFont);
+    m_cFont = nullptr;
     SDL_FreeSurface(m_cCurrentSurface);
-}
-std::string MenuItem::GetName()
-{
-    return m_sName;
+    m_cCurrentSurface = nullptr;
 }
 
-SDL_Rect MenuItem::GetCollisionRect()
+void MenuItem::Draw(GameEngine* game, int x, int y)
 {
-    return m_cCollision;
+    m_cPosition.x = x;
+    m_cPosition.y = y;
+    m_cPosition.h = GetHeight();
+    m_cPosition.w = GetWidth();
+
+
+    SDL_Texture *texture = SDL_CreateTextureFromSurface(game->m_cRenderer,m_cCurrentSurface);
+    SDL_RenderCopy(game->m_cRenderer, texture, NULL, &m_cPosition );
+
+    SDL_DestroyTexture(texture);
+
 }
 
-bool MenuItem::CheckMouse(int mouse_x, int mouse_y)
+void MenuItem::Update(GameEngine* game)
 {
-    
-    if( ( mouse_x > m_cCollision.x ) && ( mouse_x < m_cCollision.x + m_cCollision.w ) && ( mouse_y > m_cCollision.y ) && ( mouse_y < m_cCollision.y + m_cCollision.h ) )
+    if( CheckMouse() )
+    {
+        SDL_Color color = {255, 0, 0};
+        SetCurrentSurface(color);
+    }
+    else
+    {
+        SetCurrentSurface();
+    }
+}
+
+bool MenuItem::CheckMouse()
+{
+    int mouse_x = 0;
+    int mouse_y = 0;
+    SDL_GetMouseState(&mouse_x, &mouse_y);
+    if( ( mouse_x > m_cPosition.x ) && ( mouse_x < m_cPosition.x + m_cPosition.w ) && ( mouse_y > m_cPosition.y ) && ( mouse_y < m_cPosition.y + m_cPosition.h ) )
     {
         return true;
     }
 
     return false;
+}
+
+int MenuItem::GetHeight()
+{
+    int h = 0;
+
+    TTF_SizeText(m_cFont, m_sText.c_str(), nullptr, &h);
+    return h;
+}
+
+int MenuItem::GetWidth()
+{
+    int w = 0;
+
+    TTF_SizeText(m_cFont, m_sText.c_str(), &w, nullptr);
+    return w;
 }

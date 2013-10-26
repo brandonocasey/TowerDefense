@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+
 #include "GameLog.h"
 #include <SDL2/SDL.h>			// SDL OpenGL Framework
 #include <SDL2/SDL_image.h>		// An SDL2 extension that enables different image formats
@@ -11,6 +12,10 @@
 #include <ostream>				// control what output stream to print to, an actual LOG file , STDOUT, etc
 #include <string>				// Enable string data types
 #include <vector>               // Enable Vectors
+
+// Callback functions for menu items
+#include <boost/function.hpp>   // Allow function references to be accepted as arguments
+#include <boost/bind.hpp>       // Allow function references to be passed as arguments
 
 // Safely delete pointers, arrays of points, and release memory and such from the heap (dynamic memory)
 #ifndef SAFE_DELETE

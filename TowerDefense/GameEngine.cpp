@@ -147,7 +147,7 @@ void GameEngine::PushState(BaseGameState* state)
     // Pause the current State
     if ( !states.empty() )
     {
-		states.back()->Pause();
+		states.back()->Pause(this);
 	}
 
 	// store and init the new state
@@ -171,7 +171,7 @@ void GameEngine::PopState()
 	// resume previous state
 	if ( !states.empty() )
     {
-		states.back()->Resume();
+		states.back()->Resume(this);
 	}
     else
     {
@@ -179,6 +179,11 @@ void GameEngine::PopState()
     }
     logger.Log("Getting rid of the current state" + states.back()->m_sName);
 
+}
+
+void GameEngine::GetWindowSize( int *width, int *height )
+{
+    SDL_GetWindowSize( m_cWindow, width, height);
 }
 
 /**

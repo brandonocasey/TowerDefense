@@ -12,12 +12,16 @@ class MenuItem;
 class MainMenu : public BaseGameState
 {
     public:
-        void Quit(GameEngine* game);
+        void QuitCallback(GameEngine* game);
+        void NewGameCallback(GameEngine* game);
+        void LoadGameCallback(GameEngine* game);
+        void SettingsCallback(GameEngine* game);
+
         void Init();
         void Cleanup();
 
-        void Pause();
-        void Resume();
+        void Pause(GameEngine* game);
+        void Resume(GameEngine* game);
 
         void HandleEvents(GameEngine* game);
         void Update(GameEngine* game);

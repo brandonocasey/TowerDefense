@@ -21,6 +21,8 @@ class GameEngine
         void ChangeBrightness(int level);
         void ClearSaveData();
 
+        void GetWindowSize( int *width, int *height );
+
         //For use inbetween screens
         void ClearScreen();
 

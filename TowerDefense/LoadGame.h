@@ -11,8 +11,8 @@ class LoadGame : public BaseGameState
         void Init();
         void Cleanup();
 
-        void Pause();
-        void Resume();
+        void Pause(GameEngine* game);
+        void Resume(GameEngine* game);
 
         void HandleEvents(GameEngine* game);
         void Update(GameEngine* game);
