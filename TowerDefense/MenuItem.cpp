@@ -31,6 +31,7 @@ void MenuItem::Callback(GameEngine* game)
     // Stored action function to run when clicked
     if( this->CheckMouse() )
     {
+        logger.Log("User Clicked Me");
         m_fMenuCallback(game);
     }
 }

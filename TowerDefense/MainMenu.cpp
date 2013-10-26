@@ -28,6 +28,7 @@ void MainMenu::Cleanup()
 
 void MainMenu::Pause(GameEngine* game)
 {
+    Cleanup();
     game->ClearScreen();
 }
 
@@ -48,7 +49,7 @@ void MainMenu::LoadGameCallback(GameEngine* game)
 
 void MainMenu::NewGameCallback(GameEngine* game)
 {
-    game->Quit();
+    game->ChangeState( NewGame::Instance() );
 }
 
 void MainMenu::SettingsCallback(GameEngine* game)

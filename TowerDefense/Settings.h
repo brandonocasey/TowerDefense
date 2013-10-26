@@ -18,6 +18,15 @@ class Settings : public BaseGameState
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
 
+        void MasterVolumeCallback(GameEngine* game);
+        void SoundVolumeCallback(GameEngine* game);
+        void MusicVolumeCallback(GameEngine* game);
+        void ToggleFullscreenCallback(GameEngine* game);
+        void BrightnessCallback(GameEngine* game);
+        void ResizeWindowCallback(GameEngine* game);
+        void BackCallback(GameEngine* game);
+        void ClearSaveDataCallback(GameEngine* game);
+
         static Settings* Instance()
         {
             return &m_Settings;

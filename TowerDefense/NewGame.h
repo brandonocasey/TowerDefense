@@ -3,8 +3,8 @@
 
 #include "utils.h"
 #include "BaseGameState.h"
-#include "MenuItem.h"
 
+// How do I pass a map here?
 class NewGame : public BaseGameState
 {
     public:
@@ -18,6 +18,7 @@ class NewGame : public BaseGameState
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
 
+        void LoadMap(std::string map_location);
         static NewGame* Instance()
         {
             return &m_NewGame;
@@ -28,7 +29,6 @@ class NewGame : public BaseGameState
 
     private:
         static NewGame m_NewGame;
-        std::vector<MenuItem*> m_vMenuItems;
         GameLog logger;
 };
 

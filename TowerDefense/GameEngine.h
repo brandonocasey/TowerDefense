@@ -49,6 +49,8 @@ class GameEngine
         SDL_Renderer* m_cRenderer;
 
     private:
+        int m_iWindowH;
+        int m_iWindowW;
         std::vector<BaseGameState*> states;
         GameLog logger;
         SDL_Window* m_cWindow;

@@ -11,15 +11,16 @@
  * @param  fullscreen true for fullscreen window
  * @return            0 if everything was successful
  */
-int GameEngine::Init(const char* title, int width = 400, int height = 400, bool fullscreen = false)
+int GameEngine::Init(const char* title, int width = 640, int height = 640, bool fullscreen = false)
 {
     _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
-
+    m_iWindowH = 0;
+    m_iWindowW = 0;
     m_iScreenWidth = width;
     m_iScreenHeight = height;
 
     logger.Init(LOGFILE, "GameEngine" , LOG_LEVEL);
-    m_bFullscreen = nullptr;
+    m_bFullscreen = false;
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
@@ -137,6 +138,7 @@ void GameEngine::ChangeState(BaseGameState* state)
     logger.Log("Changing State to " + state->m_sName);
 }
 
+
 /**
  * Push a state onto the stack and pause the current state
  * @param state The state to push
@@ -196,7 +198,6 @@ void GameEngine::ResizeWindow(int width, int height)
     SDL_SetWindowSize(m_cWindow, width, height);
     m_iScreenWidth = width;
     m_iScreenHeight = height;
-    ToggleFullScreen();
 }
 
 /**
@@ -275,15 +276,19 @@ void GameEngine::ClearSaveData()
 void GameEngine::ToggleFullScreen()
 {
     logger.Log("Toggle Fullscreen");
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
-    // make the scaled rendering look smoother.
-    SDL_RenderSetLogicalSize(m_cRenderer, m_iScreenWidth, m_iScreenHeight);
     if( ! m_bFullscreen )
     {
-        if( SDL_SetWindowFullscreen(m_cWindow, SDL_WINDOW_FULLSCREEN_DESKTOP) )
+        m_bFullscreen = true;
+
+        // We store this so that if they toggle back out of fullscreen
+        // We can resize the window from the crazy resolution that the window
+        // will end up as
+        GetWindowSize(&m_iWindowW, &m_iWindowH);
+
+        logger.Log("Window size is currently h = " + std::to_string(m_iWindowW) + " w = " + std::to_string(m_iWindowH));
+        if( SDL_SetWindowFullscreen(m_cWindow, SDL_WINDOW_FULLSCREEN_DESKTOP) == 0 )
         {
-            m_bFullscreen = true;
-            logger.LogError("Fullscreen successfully initialized");
+            logger.Log("Fullscreen successfully initialized");
         }
         else
         {
@@ -292,15 +297,17 @@ void GameEngine::ToggleFullScreen()
     }
     else
     {
-        if( SDL_SetWindowFullscreen(m_cWindow, SDL_FALSE) )
+        m_bFullscreen = false;
+        if( SDL_SetWindowFullscreen(m_cWindow, SDL_FALSE) == 0 )
         {
-            m_bFullscreen = false;
-            logger.LogError("Fullscreen successfully turned off");
+            logger.Log("Fullscreen successfully turned off");
         }
         else
         {
-            logger.LogError("Turning Fullscreen off failed with error " +  std::string(SDL_GetError()));
+            logger.LogError("Turning Fullscreen off failed or was already off with error " +  std::string(SDL_GetError()));
         }
+
+        ResizeWindow(m_iWindowW, m_iWindowH);
     }
 }
 
