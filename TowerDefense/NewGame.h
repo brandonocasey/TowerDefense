@@ -17,6 +17,7 @@ class NewGame : public BaseGameState
         void HandleEvents(GameEngine* game);
         void Update(GameEngine* game);
         void Draw(GameEngine* game);
+        void NewGame::DrawMap(GameEngine* game);
 
         void LoadMap(std::string map_location);
         static NewGame* Instance()
@@ -28,6 +29,7 @@ class NewGame : public BaseGameState
         NewGame() { }
 
     private:
+        Tmx::Map *m_cMap;
         static NewGame m_NewGame;
         GameLog logger;
 };

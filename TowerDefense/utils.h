@@ -13,6 +13,9 @@
 #include <string>				// Enable string data types
 #include <vector>               // Enable Vectors
 
+// Map Loader
+#include <TmxParser\Tmx.h>
+
 // Callback functions for menu items
 #include <boost/function.hpp>   // Allow function references to be accepted as arguments
 #include <boost/bind.hpp>       // Allow function references to be passed as arguments

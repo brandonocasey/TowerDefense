@@ -1,4 +1,9 @@
-﻿  MainMenu.cpp
+﻿  NewGame.cpp
+  TmxParser.lib(TmxMap.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+GameEngine.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  Generating code
+  Finished generating code
   TowerDefense.vcxproj -> E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\Debug\TowerDefense.exe
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libFLAC-8.dll
   E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libfreetype-6.dll
