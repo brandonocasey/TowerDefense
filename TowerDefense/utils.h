@@ -1,17 +1,6 @@
 #pragma once
 
-#include "classes/GameEngine.h"         // Our top level Game Engine Class
 #include "classes/GameLog.h"            // The Log for our game
-
-#include "base_classes/BaseGameState.h"
-#include "base_classes/BaseObject.h"
-#include "base_classes/BaseStaticObject.h"
-
-#include "helper_classes/AudioHelper.h"
-#include "helper_classes/EventHelper.h"
-#include "helper_classes/RenderHelper.h"
-#include "helper_classes/SaveHelper.h"
-
 
 #include <SDL2/SDL.h>			// SDL OpenGL Framework
 #include <SDL2/SDL_image.h>		// An SDL2 extension that enables different image formats
@@ -47,3 +36,5 @@
 #define MENU_FONT "fonts/SourceSansPro-Regular.ttf"
 #define LOG_LEVEL 5
 #define GAME_NAME "Last Bastion"
+#define ASSET_FOLDER "assets/"
+#define SPRITES_FOLDER "assets/sprites/"

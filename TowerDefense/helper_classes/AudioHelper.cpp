@@ -3,7 +3,7 @@
 void AudioHelper::Init(int channels = 2, int chunksize = 4096, int frequency = 22050)
 {
     m_sName = "AudioHelper";
-    logger->GetLogger(m_sName);
+    logger = logger->GetLogger(m_sName);
     m_iSoundVolume = MIX_MAX_VOLUME;
     m_iAllVolume = MIX_MAX_VOLUME;
     if( Mix_OpenAudio( frequency, MIX_DEFAULT_FORMAT, channels, chunksize ) == -1 )

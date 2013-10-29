@@ -7,10 +7,10 @@
  * @param height     the height of the window
  * @param fullscreen whether to start out in fullsceen or not
  */
-void RenderHelper::Init(const char* title, int width, int height, bool fullscreen)
+bool RenderHelper::Init(const char* title, int width, int height, bool fullscreen)
 {
     m_sName = "RenderHelper";
-    logger.GetLogger("RenderHelper");
+    logger = logger->GetLogger(m_sName);
     // Initialize variables
     m_cRenderer = nullptr;
     m_cWindow = nullptr;
@@ -24,48 +24,48 @@ void RenderHelper::Init(const char* title, int width, int height, bool fullscree
 
     if( m_cWindow == nullptr )
     {
-        logger.LogSdlError("SDL_CreateWindow");
+        logger->LogSdlError("SDL_CreateWindow");
         return false;
     }
     else
     {
-        logger.Log("SDL_CreateWindow was successful");
+        logger->Log("SDL_CreateWindow was successful");
     }
 
     m_cRenderer = nullptr;
     m_cRenderer = SDL_CreateRenderer(m_cWindow, -1, SDL_RENDERER_PRESENTVSYNC);
     if( m_cRenderer == nullptr )
     {
-        logger.LogSdlError("SDL_CreateRenderer");
+        logger->LogSdlError("SDL_CreateRenderer");
         return false;
     }
     else
     {
-        logger.Log("SDL_CreateRenderer was successful");
+        logger->Log("SDL_CreateRenderer was successful");
     }
 
     int img_flags = IMG_INIT_JPG|IMG_INIT_PNG;
     if ((IMG_Init(img_flags) != img_flags))
     {
-        logger.LogSdlError("IMG_Init");
+        logger->LogSdlError("IMG_Init");
         return false;
     }
     else
     {
-        logger.Log("IMG_Init was successful!");
+        logger->Log("IMG_Init was successful!");
     }
 
     if (TTF_Init() == -1)
     {
-        logger.LogSdlError("TTF_Init");
+        logger->LogSdlError("TTF_Init");
         return false;
     }
     else
     {
-        logger.Log("TTF_Init was successful!");
+        logger->Log("TTF_Init was successful!");
     }
 
-    ToggleFullScreen(fullscreen);
+    ToggleFullscreen(fullscreen);
 
     return true;
 }
@@ -82,13 +82,12 @@ void RenderHelper::Cleanup()
 /**
  * Toggle fullscreen using the internal Variable
  */
-void RenderHelper::ToggleFullScreen()
+void RenderHelper::ToggleFullscreen()
 {
-    logger.Log("Toggle Fullscreen internal variable");
+    logger->Log("Toggle Fullscreen internal variable");
     if( ! m_bFullscreen )
     {
-
-        FullscreenOn()
+        FullscreenOn();
     }
     else
     {
@@ -100,16 +99,16 @@ void RenderHelper::ToggleFullScreen()
  * Toggle fullscreen using the variable that is passed to us
  * @param fullscreen if true we want fullscreen on, otherwise it is off
  */
-void RenderHelper::ToggleFullScreen(bool fullscreen)
+void RenderHelper::ToggleFullscreen(bool fullscreen)
 {
-    logger.Log("Toggle Fullscreen");
+    logger->Log("Toggle Fullscreen");
     if( fullscreen )
     {
-        FullscreenOn()
+        FullscreenOn();
     }
     else
     {
-        FullscreenOff()
+        FullscreenOff();
     }
 }
 
@@ -124,11 +123,11 @@ void RenderHelper::FullscreenOn()
     // will end up as
     if( SDL_SetWindowFullscreen(m_cWindow, SDL_WINDOW_FULLSCREEN_DESKTOP) == 0 )
     {
-        logger.Log("Fullscreen successfully initialized");
+        logger->Log("Fullscreen successfully initialized");
     }
     else
     {
-        logger.LogSdlError("SDL_SetWindowFullscreen on");
+        logger->LogSdlError("SDL_SetWindowFullscreen on");
     }
     m_bFullscreen = true;
 }
@@ -141,11 +140,11 @@ void RenderHelper::FullscreenOff()
     m_bFullscreen = false;
     if( SDL_SetWindowFullscreen(m_cWindow, SDL_FALSE) == 0 )
     {
-        logger.Log("Fullscreen successfully turned off");
+        logger->Log("Fullscreen successfully turned off");
     }
     else
     {
-        logger.LogSdlError("SDL_SetWindowFullscreen off");
+        logger->LogSdlError("SDL_SetWindowFullscreen off");
     }
 
     // Window is really big after fullscreen turns of if we don't do this.
@@ -163,10 +162,10 @@ void RenderHelper::FullscreenOff()
  */
 void RenderHelper::ResizeWindow(int width, int height)
 {
-    logger.Log("Resizing window to h = " + std::to_string(height) + " w = " + std::to_string(width));
+    logger->Log("Resizing window to h = " + std::to_string(height) + " w = " + std::to_string(width));
     SDL_SetWindowSize(m_cWindow, width, height);
-    m_iScreenWidth = width;
-    m_iScreenHeight = height;
+    m_iWindowWidth = width;
+    m_iWindowHeight = height;
 }
 
 
@@ -189,7 +188,7 @@ void RenderHelper::GetWindowSize( int *width, int *height )
 {
     SDL_GetWindowSize( m_cWindow, width, height);
 
-    logger.Log("Current window is h = " + std::to_string(height) + " w = " + std::to_string(width));
+    logger->Log("Current window is h = " + std::to_string(*height) + " w = " + std::to_string(*width));
 }
 
 
@@ -208,17 +207,17 @@ SDL_Texture* RenderHelper::LoadText(std::string font_location, int font_size, st
     SDL_Texture *texture = nullptr;
 
     font = LoadFont(font_location, font_size);
-    surface = TTF_RenderText_Solid(m_cFont, text.c_str(), font_color);
+    surface = TTF_RenderText_Solid(font, text.c_str(), font_color);
     if( surface = nullptr )
     {
-        logger.LogSdlError("TTF_RenderText_Solid/LoadText");
+        logger->LogSdlError("TTF_RenderText_Solid/LoadText");
     }
     else
     {
         texture = SDL_CreateTextureFromSurface(m_cRenderer,surface);
         if( texture = nullptr )
         {
-            logger.LogSdlError("SDL_CreateTextureFromSurface/LoadText");
+            logger->LogSdlError("SDL_CreateTextureFromSurface/LoadText");
         }
     }
 
@@ -239,10 +238,10 @@ SDL_Texture* RenderHelper::LoadText(std::string font_location, int font_size, st
 SDL_Texture* RenderHelper::LoadImage(std::string image_location)
 {
     SDL_Texture* texture = nullptr;
-    texture = IMG_LoadTexture( game->m_cRenderer, image_location );
+    texture = IMG_LoadTexture( m_cRenderer, image_location.c_str() );
     if( texture = nullptr )
     {
-        logger.LogSdlError("IMG_LoadTexture/LoadImage with asset " + image_location + " ");
+        logger->LogSdlError("IMG_LoadTexture/LoadImage with asset " + image_location );
     }
 
     return texture;
@@ -254,13 +253,13 @@ SDL_Texture* RenderHelper::LoadImage(std::string image_location)
  * @param  font_size     the size of the fonts text
  * @return font          an SDL object containing the font
  */
-SDL_Font* RenderHelper::LoadFont(std::string font_location, int font_size)
+TTF_Font* RenderHelper::LoadFont(std::string font_location, int font_size)
 {
-    SDL_Font* font = nullptr;
+    TTF_Font* font = nullptr;
     font = TTF_OpenFont(font_location.c_str(), font_size);
     if( font == nullptr )
     {
-        logger.LogSdlError("TTF_OpenFont/LoadText");
+        logger->LogSdlError("TTF_OpenFont/LoadText");
     }
 
     return font;
@@ -274,7 +273,7 @@ SDL_Font* RenderHelper::LoadFont(std::string font_location, int font_size)
  */
 void RenderHelper::GetTextureSize(SDL_Texture* texture, int *width, int *height)
 {
-    SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+    SDL_QueryTexture(texture, NULL, NULL, width, height);
 }
 
 /**
@@ -284,9 +283,9 @@ void RenderHelper::GetTextureSize(SDL_Texture* texture, int *width, int *height)
  * @param  width  a pointer to be filled with that fonts width
  * @param  height a pointer to be filled with that fonts height
  */
-void RenderHelper::GetFontSize(SDL_Font* font, std::string text, int *width, int *height)
+void RenderHelper::GetFontSize(TTF_Font* font, std::string text, int *width, int *height)
 {
-    TTF_SizeText(font, text.c_str(), &width, &height);
+    TTF_SizeText(font, text.c_str(), width, height);
 }
 
 /**
@@ -294,21 +293,21 @@ void RenderHelper::GetFontSize(SDL_Font* font, std::string text, int *width, int
  * @param text_texture the texture to render
  * @param destination  the destination of that texture
  */
-void RenderHelper::RenderTexture(SDL_Texture* text_texture, SDL_Rect destination, SDL_Rect source)
+void RenderHelper::RenderTexture(SDL_Texture* texture, SDL_Rect destination, SDL_Rect source)
 {
     if( !destination.w )
     {
-        destination.w = GetTextureWidth(texture);
+        GetTextureSize(texture, &destination.w, NULL);
     }
 
     if( !destination.h )
     {
-        destination.h = GetTextureHeight(texture);
+        GetTextureSize(texture, NULL, &destination.h);
     }
 
 
-    SDL_RenderCopy(game->m_cRenderer, text_texture, &source, &destination);
-    SDL_RenderPresent(game->m_cRenderer);
+    SDL_RenderCopy(m_cRenderer, texture, &source, &destination);
+    SDL_RenderPresent(m_cRenderer);
 }
 
 /**
@@ -320,7 +319,7 @@ void RenderHelper::RenderTexture(SDL_Texture* text_texture, SDL_Rect destination
  * @param destination   destination rect for the font
  * @param source        defaults to null, if you want part of a font add this
  */
-void RenderHelper::RenderText(std::string font_location, int font_size, std::string text, SDL_color color, SDL_Rect destination, SDL_Rect source)
+void RenderHelper::RenderText(std::string font_location, int font_size, std::string text, SDL_Color color, SDL_Rect destination, SDL_Rect source)
 {
     SDL_Texture* text_texture = LoadText(font_location, font_size, text, color);
     RenderTexture(text_texture, destination, source);
@@ -331,6 +330,6 @@ void RenderHelper::RenderText(std::string font_location, int font_size, std::str
 void RenderHelper::RenderImage(std::string image_location, SDL_Rect destination, SDL_Rect source)
 {
     SDL_Texture* image_texture = LoadImage(image_location);
-    RenderTexture(image_texture);
+    RenderTexture(image_texture, destination, source);
     SDL_DestroyTexture(image_texture);
 }

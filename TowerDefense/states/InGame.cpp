@@ -3,20 +3,20 @@
 
 InGame InGame::m_InGame;
 
-void InGame::Init()
+void InGame::Init(GameEngine* game)
 {
     m_sName = "InGame";
-    logger.Init(LOGFILE, m_sName, 5);
+    logger = logger->GetLogger(m_sName);
     m_cMap = nullptr;
 
     m_bMapDrawn = false;
     m_cMap = new Tmx::Map();
 
-    LoadGame("./maps/level_1.tmx");
+    LoadGame("./assets/maps/level_1.tmx");
 
 }
 
-void InGame::Cleanup()
+void InGame::Cleanup(GameEngine* game)
 {
 
 }
@@ -83,7 +83,7 @@ void InGame::DrawTowers(GameEngine* game)
 {
     for(Tower* it : m_vTowerList )
     {
-        m_vTowerList.back()->Draw(game);
+        //m_vTowerList.back()->Draw(game);
     }
 }
 
@@ -96,7 +96,7 @@ void InGame::DrawMap(GameEngine* game)
 
     if( ! m_bMapDrawn )
     {
-        logger.Log("Drawing Map");
+        logger->Log("Drawing Map");
         for (int i = 0; i < m_cMap->GetNumLayers(); ++i)
         {
             const Tmx::Layer *layer = m_cMap->GetLayer(i);
@@ -118,7 +118,16 @@ void InGame::DrawMap(GameEngine* game)
                     destination.y = y* destination.h;
 
                     std::string tile_source = tileset->GetImage()->GetSource();
-                    tile_source = tile_source.substr(3);
+
+                    int last_slash = tile_source.find_last_of("/");
+
+                    if( last_slash > 0 )
+                    {
+                        tile_source = tile_source.substr(last_slash+1);
+                    }
+
+                    std::string sprites = SPRITES_FOLDER;
+                    tile_source = sprites + tile_source;
                     SDL_Texture* texture = IMG_LoadTexture( game->m_cRenderer, tile_source.c_str()  );
                     // load texture
 
@@ -134,19 +143,19 @@ void InGame::DrawMap(GameEngine* game)
  //   texture = nullptr;
 }
 
-void InGame::LoadMap(std::string map_location)
+void InGame::LoadGame(std::string map_location)
 {
-    logger.Log("Attempting to parse map located at " + map_location);
+    logger->Log("Attempting to parse map located at " + map_location);
     m_cMap->ParseFile(map_location);
 
     if (m_cMap->HasError())
     {
-        logger.LogError("error code: " +  m_cMap->GetErrorCode());
-        logger.LogError("error text: " +  m_cMap->GetErrorText());
+        logger->LogError("error code: " +  m_cMap->GetErrorCode());
+        logger->LogError("error text: " +  m_cMap->GetErrorText());
     }
     else
     {
-        logger.Log("Successfully loaded map located at " + map_location);
+        logger->Log("Successfully loaded map located at " + map_location);
     }
 
 }

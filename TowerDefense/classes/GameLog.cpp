@@ -3,18 +3,20 @@
 // Singleton Yeah!
 GameLog GameLog::m_GameLog;
 
-void GameLog::Init(std::ostream &os, const std::string &caller, int log_level)
+GameLog* GameLog::Init(std::ostream &os, std::string &caller, int log_level)
 {
-     m_sLogCaller = "unknown";
-     m_iLogLevel = log_level;
-     LogStream = &os;
+     m_GameLog.SetCaller(caller);
+     m_GameLog.SetLogLevel(log_level);
+     m_GameLog.SetLogFile(os);
+
+     return &m_GameLog;
 }
 
-void GameLog::Log(const std::string &msg, int log_level = 5)
+void GameLog::Log(const std::string &msg, int log_level)
 {
     if(m_iLogLevel >= log_level)
     {
-        *LogStream << m_sLogCaller << ": " << msg << std::endl;
+        *m_cLogFile << m_sLogCaller << ": " << msg << std::endl;
     }
 }
 
@@ -37,6 +39,11 @@ void GameLog::LogSdlError(const std::string &function_name)
 void GameLog::SetCaller(std::string &caller)
 {
     m_sLogCaller = caller;
+}
+
+void GameLog::SetLogFile( std::ostream &os )
+{
+    m_cLogFile = &os;
 }
 
 void GameLog::SetLogLevel(int log_level)

@@ -1,6 +1,6 @@
 #pragma once
 #include "../Utils.h"
-
+#include "../classes/GameEngine.h"
 class BaseGameState
 {
     public:

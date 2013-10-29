@@ -1,8 +1,9 @@
 #pragma once
 
-#include "utils.h"
-#include "BaseGameState.h"
-#include "NewGame.h"
+#include "../Utils.h"
+#include "../base_classes/BaseGameState.h"
+#include "../classes/GameEngine.h"
+#include "InGame.h"
 #include "Settings.h"
 #include "LoadGame.h"
 
@@ -16,8 +17,8 @@ class MainMenu : public BaseGameState
         void LoadGameCallback(GameEngine* game);
         void SettingsCallback(GameEngine* game);
 
-        void Init();
-        void Cleanup();
+        void Init(GameEngine* game);
+        void Cleanup(GameEngine* game);
 
         void Pause(GameEngine* game);
         void Resume(GameEngine* game);
@@ -37,5 +38,5 @@ class MainMenu : public BaseGameState
     private:
         static MainMenu m_MainMenu;
         std::vector<MenuItem*> m_vMenuItems;
-        GameLog logger;
+        GameLog *logger;
 };

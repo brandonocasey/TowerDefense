@@ -4,7 +4,7 @@
 class AudioHelper
 {
     public:
-        void Init(int channels = 2, int chunksize = 4096, int frequency = 22050);
+        void Init(int channels, int chunksize, int frequency);
         void Cleanup();
 
         Mix_Music* LoadMusic( std::string location );
@@ -15,7 +15,7 @@ class AudioHelper
 
         void PlaySound(std::string sound_location);
         void PlayMusic(std::string music_location);
-        void AudioHelper::PlayMusic( Mix_Music* music );
+        void PlayMusic( Mix_Music* music );
 
         void PauseMusic();
         void ToggleMusic();

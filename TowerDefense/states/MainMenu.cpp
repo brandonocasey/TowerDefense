@@ -1,12 +1,12 @@
 #include "MainMenu.h"
-#include "MenuItem.h"
+#include "../classes/MenuItem.h"
 // Singleton Yeah!
 MainMenu MainMenu::m_MainMenu;
 
-void MainMenu::Init()
+void MainMenu::Init(GameEngine* game)
 {
     m_sName = "MainMenu";
-    logger.Init(LOGFILE, m_sName, 5);
+    logger = logger->GetLogger(m_sName);
 
     m_vMenuItems.push_back( new MenuItem("New Game", boost::bind(&MainMenu::NewGameCallback, this, _1) ) );
     m_vMenuItems.push_back( new MenuItem("Load Game", boost::bind(&MainMenu::LoadGameCallback, this, _1) ) );
@@ -15,7 +15,7 @@ void MainMenu::Init()
 
 }
 
-void MainMenu::Cleanup()
+void MainMenu::Cleanup(GameEngine* game)
 {
     while( ! m_vMenuItems.empty() )
     {
@@ -26,13 +26,13 @@ void MainMenu::Cleanup()
 
 void MainMenu::Pause(GameEngine* game)
 {
-    Cleanup();
+    Cleanup(game);
     game->ClearScreen();
 }
 
 void MainMenu::Resume(GameEngine* game)
 {
-    Init();
+    Init(game);
 }
 
 void MainMenu::QuitCallback(GameEngine* game)

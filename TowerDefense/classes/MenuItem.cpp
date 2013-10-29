@@ -3,7 +3,7 @@
 
 MenuItem::MenuItem( std::string name, boost::function<void(GameEngine* game)> action_function )
 {
-    logger.GetLogger(name);
+    logger->GetLogger(name);
     m_bSelected = false;
 
     m_sText = name;
@@ -18,7 +18,7 @@ MenuItem::MenuItem( std::string name, boost::function<void(GameEngine* game)> ac
     m_cFont = TTF_OpenFont(font_file.c_str(), 24);
     if( m_cFont == nullptr )
     {
-        logger.LogError("There was an error loading the font");
+        logger->LogError("There was an error loading the font");
     }
 
     m_cCurrentSurface = nullptr;
@@ -31,7 +31,7 @@ void MenuItem::Callback(GameEngine* game)
     // Stored action function to run when clicked
     if( this->CheckMouse() )
     {
-        logger.Log("User Clicked Me");
+        logger->Log("User Clicked Me");
         m_fMenuCallback(game);
     }
 }
@@ -54,7 +54,7 @@ void MenuItem::SetCurrentSurface(SDL_Color font_color)
     m_cCurrentSurface = TTF_RenderText_Solid(m_cFont, m_sText.c_str(), font_color);
     if( m_cCurrentSurface == nullptr )
     {
-        logger.LogError("There was an error loading the surface");
+        logger->LogError("There was an error loading the surface");
     }
 }
 

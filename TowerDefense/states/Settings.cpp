@@ -3,10 +3,10 @@
 // Singleton Yeah!
 Settings Settings::m_Settings;
 
-void Settings::Init()
+void Settings::Init(GameEngine* game)
 {
     m_sName = "Settings";
-    logger.Init(LOGFILE, m_sName, 5);
+    logger = logger->GetLogger(m_sName);
 
 
 
@@ -52,7 +52,7 @@ void Settings::BackCallback(GameEngine* game)
     game->ClearScreen();
     game->PopState();
 }
-void Settings::Cleanup()
+void Settings::Cleanup(GameEngine* game)
 {
     while( ! m_vMenuItems.empty() )
     {
@@ -63,13 +63,13 @@ void Settings::Cleanup()
 
 void Settings::Pause(GameEngine* game)
 {
-    Cleanup();
+    Cleanup(game);
     game->ClearScreen();
 }
 
 void Settings::Resume(GameEngine* game)
 {
-    Init();
+    Init(game);
 }
 
 void Settings::HandleEvents(GameEngine* game)

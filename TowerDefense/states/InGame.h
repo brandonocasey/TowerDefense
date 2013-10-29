@@ -1,14 +1,15 @@
 #pragma once
 
-#include "..\Utils.h"
-
+#include "../Utils.h"
+#include "../classes/GameEngine.h"
+#include "../base_classes/BaseGameState.h"
 class Tower;
 // How do I pass a map here?
 class InGame : public BaseGameState
 {
     public:
-        void Init();
-        void Cleanup();
+        void Init(GameEngine* game);
+        void Cleanup(GameEngine* game);
 
         void Pause(GameEngine* game);
         void Resume(GameEngine* game);
@@ -20,7 +21,7 @@ class InGame : public BaseGameState
         void DrawTowers(GameEngine* game);
         void InGame::DrawMap(GameEngine* game);
 
-        void LoadMap(std::string map_location);
+        void LoadGame(std::string map_location);
         static InGame* Instance()
         {
             return &m_InGame;
@@ -30,9 +31,10 @@ class InGame : public BaseGameState
         InGame() { }
 
     private:
+        std::string m_sName;
         Tmx::Map *m_cMap;
         static InGame m_InGame;
         GameLog *logger;
         bool m_bMapDrawn;
-         std::vector<Tower*> m_vTowerList;
+        std::vector<Tower*> m_vTowerList;
 };

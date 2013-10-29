@@ -1,15 +1,15 @@
-#ifndef SETTINGS_H
-#define SETTINGS_H
+#pragma once
 
-#include "utils.h"
-#include "BaseGameState.h"
-#include "MenuItem.h"
+#include "../Utils.h"
+#include "../base_classes/BaseGameState.h"
+#include "../classes/MenuItem.h"
+#include "../classes/GameEngine.h"
 
 class Settings : public BaseGameState
 {
     public:
-        void Init();
-        void Cleanup();
+        void Init(GameEngine* game);
+        void Cleanup(GameEngine* game);
 
         void Pause(GameEngine* game);
         void Resume(GameEngine* game);
@@ -38,7 +38,5 @@ class Settings : public BaseGameState
     private:
         static Settings m_Settings;
         std::vector<MenuItem*> m_vMenuItems;
-        GameLog logger;
+        GameLog *logger;
 };
-
-#endif

@@ -1,6 +1,11 @@
 #pragma once
 
 #include "../Utils.h"
+#include "../helper_classes/AudioHelper.h"
+#include "../helper_classes/EventHelper.h"
+#include "../helper_classes/RenderHelper.h"
+#include "../helper_classes/SaveHelper.h"
+
 class BaseGameState; // Forward deceleration so that we can use GameEngines in Base Game States
 
 class GameEngine
@@ -49,13 +54,14 @@ class GameEngine
 
         AudioHelper* AudioHelper;
         RenderHelper* RenderHelper;
-        Controls* Controls;
+        EventHelper* EventHelper;
 
     private:
         int m_iWindowH;
         int m_iWindowW;
+        std::string m_sName;
         std::vector<BaseGameState*> states;
-        GameLog logger;
+        GameLog *logger;
         SDL_Window* m_cWindow;
         bool m_bRunning;
         bool m_bFullscreen;

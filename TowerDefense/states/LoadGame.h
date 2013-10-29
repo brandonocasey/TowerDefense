@@ -1,15 +1,14 @@
-#ifndef LOADGAME_H
-#define LOADGAME_H
+#pragma once
 
-#include "utils.h"
-#include "BaseGameState.h"
-#include "MenuItem.h"
+#include "../Utils.h"
+#include "../base_classes/BaseGameState.h"
+#include "../classes/MenuItem.h"
 
 class LoadGame : public BaseGameState
 {
     public:
-        void Init();
-        void Cleanup();
+        void Init(GameEngine* game);
+        void Cleanup(GameEngine* game);
 
         void Pause(GameEngine* game);
         void Resume(GameEngine* game);
@@ -29,7 +28,5 @@ class LoadGame : public BaseGameState
     private:
         static LoadGame m_LoadGame;
         std::vector<MenuItem*> m_vMenuItems;
-        GameLog logger;
+        GameLog *logger;
 };
-
-#endif

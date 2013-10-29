@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Utils.h"
-
+#include "../classes/GameEngine.h"
 class MainMenu;
 
 class MenuItem
@@ -49,5 +49,5 @@ class MenuItem
         // The main event, our menu text
         std::string m_sText;
         TTF_Font* m_cFont;
-        GameLog logger;
+        GameLog *logger;
 };

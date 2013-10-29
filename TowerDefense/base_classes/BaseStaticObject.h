@@ -42,5 +42,5 @@ class BaseStaticObject : BaseObject
         bool m_bInvulnerable;
         bool m_bPaused;
 
-        GameLog logger;
+        GameLog *logger;
 };

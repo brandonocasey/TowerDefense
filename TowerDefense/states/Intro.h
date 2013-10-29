@@ -1,5 +1,4 @@
-#ifndef INTRO_H
-#define INTRO_H
+#pragma once
 
 // This will be the state directly after the intro
 // Change it here and a few other places.
@@ -9,8 +8,8 @@
 class Intro : public BaseGameState
 {
     public:
-        void Init();
-        void Cleanup();
+        void Init(GameEngine* game);
+        void Cleanup(GameEngine* game);
 
         void Pause(GameEngine* game);
         void Resume(GameEngine* game);
@@ -37,7 +36,5 @@ class Intro : public BaseGameState
         SDL_Texture* m_cCurrentTexture;
         int m_iCountdownStart;
         int m_iCountdownTotalSeconds;
-        GameLog logger;
+        GameLog *logger;
 };
-
-#endif

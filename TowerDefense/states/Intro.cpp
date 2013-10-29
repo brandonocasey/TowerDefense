@@ -4,7 +4,7 @@ const int LOGO_SECONDS = 5;
 // Singleton Yeah!
 Intro Intro::m_Intro;
 
-void Intro::Init()
+void Intro::Init(GameEngine* game)
 {
     m_sName = "Intro";
     m_cCurrentTexture = nullptr;
@@ -12,7 +12,7 @@ void Intro::Init()
     m_iCountdownTotalSeconds = 0;
 
 
-    logger.Init(LOGFILE, m_sName, 5);
+   logger = logger->GetLogger(m_sName);
 
     m_vBackgrounds.push_back( "img/logo.jpg" );
 
@@ -26,7 +26,7 @@ void Intro::Init()
 	//printf("CMenuState Init\n");
 }
 
-void Intro::Cleanup()
+void Intro::Cleanup(GameEngine* game)
 {
     // Free the memory for all of the images.
 
@@ -44,7 +44,7 @@ void Intro::Pause(GameEngine* game)
 
 void Intro::Resume(GameEngine* game)
 {
-    Init();
+    Init(game);
 }
 
 void Intro::HandleEvents(GameEngine* game)
@@ -63,7 +63,7 @@ void Intro::HandleEvents(GameEngine* game)
             // If they hit a key we change to the press start state
 			case SDL_KEYDOWN:
             case SDL_MOUSEBUTTONDOWN:
-                logger.Log("User has skipped intro");
+                logger->Log("User has skipped intro");
 			    NextState(game);
 				break;
 		}
@@ -78,7 +78,7 @@ void Intro::StartTimer()
 
     m_iCountdownTotalSeconds += m_iCountdownStart;
 
-    logger.Log("Started a timer with start milli seconds of " + std::to_string(m_iCountdownStart) + " and end of " + std::to_string(m_iCountdownTotalSeconds) );
+    logger->Log("Started a timer with start milli seconds of " + std::to_string(m_iCountdownStart) + " and end of " + std::to_string(m_iCountdownTotalSeconds) );
 }
 
 bool Intro::TimerOver()
@@ -105,12 +105,12 @@ void Intro::Update(GameEngine* game)
         m_cCurrentTexture = IMG_LoadTexture( game->m_cRenderer, m_vBackgrounds.back().c_str() );
         if( m_cCurrentTexture != nullptr )
         {
-            logger.Log( "Changed the background image to " + m_vBackgrounds.back() );
+            logger->Log( "Changed the background image to " + m_vBackgrounds.back() );
             m_vBackgrounds.pop_back();
         }
         else
         {
-            logger.LogError( "LoadTexture Failed for image " + m_vBackgrounds.back() );
+            logger->LogError( "LoadTexture Failed for image " + m_vBackgrounds.back() );
         }
         StartTimer();
     }
@@ -153,7 +153,7 @@ void Intro::Draw(GameEngine* game)
 
 	        destination.w = w;
 	        destination.h = h;
-            logger.Log("Attempting to render an image at x = " + std::to_string(x) + " y = " + std::to_string(y) + " h = " + std::to_string(h) + " w = " + std::to_string(w));
+            logger->Log("Attempting to render an image at x = " + std::to_string(x) + " y = " + std::to_string(y) + " h = " + std::to_string(h) + " w = " + std::to_string(w));
 	        SDL_RenderCopy(game->m_cRenderer, m_cCurrentTexture, NULL, &destination);
             SDL_RenderPresent(game->m_cRenderer);
             SDL_DestroyTexture(m_cCurrentTexture);
@@ -162,7 +162,7 @@ void Intro::Draw(GameEngine* game)
         //}
         //else
         //{
-        //    logger.LogError("SDL_GetRenderInfo returned a nullptr with error" + std::string(SDL_GetError()) );
+        //    logger->LogError("SDL_GetRenderInfo returned a nullptr with error" + std::string(SDL_GetError()) );
         //}
     }
 }

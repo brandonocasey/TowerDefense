@@ -18,62 +18,64 @@ int GameEngine::Init(const char* title, int width = 640, int height = 640, bool 
     m_iScreenWidth = width;
     m_iScreenHeight = height;
 
-    logger.Init(LOG_FILE, "GameEngine" , LOG_LEVEL);
+    m_sName = "GameEngine";
+
+    logger = logger->Init(std::cout, m_sName, 5);
     m_bFullscreen = false;
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
-        logger.LogError( std::string("SDL_Init: ") + SDL_GetError() );
+        logger->LogError( std::string("SDL_Init: ") + SDL_GetError() );
         return 1;
     }
     else
     {
-        logger.Log("SDL_Init: SDL_Init_Everything work OK");
+        logger->Log("SDL_Init: SDL_Init_Everything work OK");
     }
 
     m_cWindow = nullptr;
     m_cWindow = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
     if( m_cWindow == nullptr )
     {
-        logger.LogError( std::string("SDL_CreateWindow: ") + SDL_GetError() );
+        logger->LogError( std::string("SDL_CreateWindow: ") + SDL_GetError() );
         return 2;
     }
     else
     {
-        logger.Log("SDL_CreateWindow was successful");
+        logger->Log("SDL_CreateWindow was successful");
     }
 
     m_cRenderer = nullptr;
     m_cRenderer = SDL_CreateRenderer(m_cWindow, -1, SDL_RENDERER_PRESENTVSYNC|SDL_RENDERER_ACCELERATED);
     if( m_cRenderer == nullptr )
     {
-        logger.LogError( std::string("SDL_CreateRenderer: ") + SDL_GetError() );
+        logger->LogError( std::string("SDL_CreateRenderer: ") + SDL_GetError() );
         return 3;
     }
     else
     {
-        logger.Log("SDL_CreateRenderer was successful");
+        logger->Log("SDL_CreateRenderer was successful");
     }
 
     int img_flags = IMG_INIT_JPG|IMG_INIT_PNG;
     if ((IMG_Init(img_flags) != img_flags))
     {
-		logger.LogError("IMG_Init failed to init jpeg with error "  + std::string(SDL_GetError()) );
+		logger->LogError("IMG_Init failed to init jpeg with error "  + std::string(SDL_GetError()) );
         return 4;
 	}
     else
     {
-        logger.Log("IMG_Init was successful!");
+        logger->Log("IMG_Init was successful!");
     }
 
     if (TTF_Init() == -1)
     {
-		logger.LogError("TTF_Init Failed with error: "  + std::string(TTF_GetError()) );
+		logger->LogError("TTF_Init Failed with error: "  + std::string(TTF_GetError()) );
         return 5;
 	}
     else
     {
-        logger.Log("TTF_Init was successful!");
+        logger->Log("TTF_Init was successful!");
     }
 
     // Setup full screen if we need to
@@ -96,11 +98,11 @@ int GameEngine::Init(const char* title, int width = 640, int height = 640, bool 
  */
 void GameEngine::Cleanup()
 {
-    logger.Log("Attempting to cleanup all of the things in GameEngine");
+    logger->Log("Attempting to cleanup all of the things in GameEngine");
     while( ! states.empty() )
     {
-        logger.Log("Calling Cleanup function for " + states.back()->m_sName);
-        states.back()->Cleanup();
+        logger->Log("Calling Cleanup function for " + states.back()->m_sName);
+        states.back()->Cleanup(this);
         states.pop_back();
     }
 
@@ -127,14 +129,14 @@ void GameEngine::ChangeState(BaseGameState* state)
 {
     if( ! states.empty() )
     {
-        states.back()->Cleanup();
+        states.back()->Cleanup(this);
         states.pop_back();
         ClearScreen();
     }
 
     states.push_back( state );
-    states.back()->Init();
-    logger.Log("Changing State to " + state->m_sName);
+    states.back()->Init(this);
+    logger->Log("Changing State to " + state->m_sName);
 }
 
 
@@ -144,7 +146,7 @@ void GameEngine::ChangeState(BaseGameState* state)
  */
 void GameEngine::PushState(BaseGameState* state)
 {
-    logger.Log("Pushing a new State " + state->m_sName);
+    logger->Log("Pushing a new State " + state->m_sName);
     // Pause the current State
     if ( !states.empty() )
     {
@@ -153,7 +155,7 @@ void GameEngine::PushState(BaseGameState* state)
 
 	// store and init the new state
 	states.push_back(state);
-	states.back()->Init();
+	states.back()->Init(this);
 
 }
 
@@ -165,7 +167,7 @@ void GameEngine::PopState()
     // cleanup the current state
 	if ( !states.empty() )
     {
-		states.back()->Cleanup();
+		states.back()->Cleanup(this);
 		states.pop_back();
 	}
 
@@ -176,9 +178,9 @@ void GameEngine::PopState()
 	}
     else
     {
-        logger.LogError("Attempted to pop off a state when there are none");
+        logger->LogError("Attempted to pop off a state when there are none");
     }
-    logger.Log("Getting rid of the current state" + states.back()->m_sName);
+    logger->Log("Getting rid of the current state" + states.back()->m_sName);
 
 }
 
@@ -274,7 +276,7 @@ void GameEngine::ClearSaveData()
  */
 void GameEngine::ToggleFullScreen()
 {
-    logger.Log("Toggle Fullscreen");
+    logger->Log("Toggle Fullscreen");
     if( ! m_bFullscreen )
     {
         m_bFullscreen = true;
@@ -284,14 +286,14 @@ void GameEngine::ToggleFullScreen()
         // will end up as
         GetWindowSize(&m_iWindowW, &m_iWindowH);
 
-        logger.Log("Window size is currently h = " + std::to_string(m_iWindowW) + " w = " + std::to_string(m_iWindowH));
+        logger->Log("Window size is currently h = " + std::to_string(m_iWindowW) + " w = " + std::to_string(m_iWindowH));
         if( SDL_SetWindowFullscreen(m_cWindow, SDL_WINDOW_FULLSCREEN_DESKTOP) == 0 )
         {
-            logger.Log("Fullscreen successfully initialized");
+            logger->Log("Fullscreen successfully initialized");
         }
         else
         {
-            logger.LogError("Turning Fullscreen On failed with error " + std::string(SDL_GetError()));
+            logger->LogError("Turning Fullscreen On failed with error " + std::string(SDL_GetError()));
         }
     }
     else
@@ -299,11 +301,11 @@ void GameEngine::ToggleFullScreen()
         m_bFullscreen = false;
         if( SDL_SetWindowFullscreen(m_cWindow, SDL_FALSE) == 0 )
         {
-            logger.Log("Fullscreen successfully turned off");
+            logger->Log("Fullscreen successfully turned off");
         }
         else
         {
-            logger.LogError("Turning Fullscreen off failed or was already off with error " +  std::string(SDL_GetError()));
+            logger->LogError("Turning Fullscreen off failed or was already off with error " +  std::string(SDL_GetError()));
         }
 
         ResizeWindow(m_iWindowW, m_iWindowH);
@@ -342,7 +344,7 @@ bool GameEngine::Running()
  */
 void GameEngine::Quit()
 {
-    logger.Log("Quit has been called");
+    logger->Log("Quit has been called");
     m_bRunning = false;
 }
 
