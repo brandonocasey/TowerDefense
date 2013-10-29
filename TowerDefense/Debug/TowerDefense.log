@@ -1,26 +1,775 @@
-﻿  NewGame.cpp
-  TmxParser.lib(TmxMap.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
-GameEngine.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
-  Generating code
-  Finished generating code
-  TowerDefense.vcxproj -> E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\Debug\TowerDefense.exe
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libFLAC-8.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libfreetype-6.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libjpeg-9.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libmikmod-2.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libmodplug-1.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libogg-0.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libpng16-16.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libtiff-5.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libvorbis-0.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libvorbisfile-3.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\libwebp-4.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_image.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_mixer.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_net.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\SDL2_ttf.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\smpeg2.dll
-  E:\Libraries\Cloud Storage\Dropbox\School\14 - Fall 2013\Video Game Production Project\Module 4\TowerDefense\TowerDefense\libs\zlib1.dll
-  18 File(s) copied
+﻿  main.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2039: 'vector' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2143: syntax error : missing ';' before '<'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2238: unexpected token(s) preceding ';'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2061: syntax error : identifier 'ostream'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2146: syntax error : missing ';' before identifier 'GetCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): warning C4183: 'GetCaller': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2146: syntax error : missing ';' before identifier 'm_sLogCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(13): error C2065: 'caller' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(35): error C2248: 'GameLog::GameLog' : cannot access protected member declared in class 'GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(26) : see declaration of 'GameLog::GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(5) : see declaration of 'GameLog'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): warning C4183: 'LoadMusic': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): warning C4183: 'LoadSound': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2535: 'void AudioHelper::PlaySound(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13) : see declaration of 'AudioHelper::PlaySound'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2061: syntax error : identifier 'Mix_Music'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C2146: syntax error : missing ';' before identifier 'GetTextDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): warning C4183: 'GetTextDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C2146: syntax error : missing ';' before identifier 'GetTextureDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): warning C4183: 'GetTextureDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C2146: syntax error : missing ';' before identifier 'GetScreenDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): warning C4183: 'GetScreenDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2059: syntax error : '<class-head>'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2630: ';' found in what should be a comma-separated list
+  RenderHelper.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2039: 'vector' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2143: syntax error : missing ';' before '<'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2238: unexpected token(s) preceding ';'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2061: syntax error : identifier 'ostream'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2146: syntax error : missing ';' before identifier 'GetCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): warning C4183: 'GetCaller': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2146: syntax error : missing ';' before identifier 'm_sLogCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(13): error C2065: 'caller' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(35): error C2248: 'GameLog::GameLog' : cannot access protected member declared in class 'GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(26) : see declaration of 'GameLog::GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(5) : see declaration of 'GameLog'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): warning C4183: 'LoadMusic': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): warning C4183: 'LoadSound': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2535: 'void AudioHelper::PlaySound(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13) : see declaration of 'AudioHelper::PlaySound'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2061: syntax error : identifier 'Mix_Music'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2533: 'RenderHelper' : constructors not allowed a return type
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(10): error C2062: type 'void' unexpected
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(11): error C2630: ';' found in what should be a comma-separated list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(12): error C2065: 'm_sName' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(13): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(13): error C2228: left of '.GetLogger' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(18): error C2065: 'height' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(19): error C2065: 'width' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(23): error C2065: 'title' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(23): error C2065: 'width' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(23): error C2065: 'height' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(27): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(27): error C2228: left of '.LogSdlError' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(28): error C2534: 'RenderHelper' : constructor cannot return a value
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(32): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(32): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(36): error C2664: 'SDL_CreateRenderer' : cannot convert parameter 1 from 'SDL_Renderer *' to 'SDL_Window *'
+          Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(39): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(39): error C2228: left of '.LogSdlError' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(40): error C2534: 'RenderHelper' : constructor cannot return a value
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(44): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(44): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(50): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(50): error C2228: left of '.LogSdlError' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(51): error C2534: 'RenderHelper' : constructor cannot return a value
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(55): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(55): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(60): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(60): error C2228: left of '.LogSdlError' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(61): error C2534: 'RenderHelper' : constructor cannot return a value
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(65): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(65): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(68): error C2065: 'fullscreen' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(70): error C2534: 'RenderHelper' : constructor cannot return a value
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(76): error C2664: 'SDL_DestroyWindow' : cannot convert parameter 1 from 'SDL_Renderer *' to 'SDL_Window *'
+          Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(86): error C2511: 'void RenderHelper::ToggleFullScreen(void)' : overloaded member function not found in 'RenderHelper'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(4) : see declaration of 'RenderHelper'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(105): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(105): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(109): error C2143: syntax error : missing ';' before '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(113): error C2143: syntax error : missing ';' before '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(121): error C2065: 'm_iPreviousWindowWidth' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(121): error C2065: 'm_iPreviousWindowHeight' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(125): error C2664: 'SDL_SetWindowFullscreen' : cannot convert parameter 1 from 'SDL_Renderer *' to 'SDL_Window *'
+          Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(127): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(127): error C2228: left of '.Log' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(131): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(131): error C2228: left of '.LogSdlError' must have class/struct/union
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(142): error C2664: 'SDL_SetWindowFullscreen' : cannot convert parameter 1 from 'SDL_Renderer *' to 'SDL_Window *'
+          Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(144): error C2065: 'logger' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.cpp(144): fatal error C1003: error count exceeds 100; stopping compilation
+  AudioHelper.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2039: 'vector' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2143: syntax error : missing ';' before '<'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2238: unexpected token(s) preceding ';'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2061: syntax error : identifier 'ostream'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2146: syntax error : missing ';' before identifier 'GetCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): warning C4183: 'GetCaller': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2146: syntax error : missing ';' before identifier 'm_sLogCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(13): error C2065: 'caller' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(35): error C2248: 'GameLog::GameLog' : cannot access protected member declared in class 'GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(26) : see declaration of 'GameLog::GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(5) : see declaration of 'GameLog'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C2146: syntax error : missing ';' before identifier 'GetTextDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): warning C4183: 'GetTextDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C2146: syntax error : missing ';' before identifier 'GetTextureDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): warning C4183: 'GetTextureDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C2146: syntax error : missing ';' before identifier 'GetScreenDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): warning C4183: 'GetScreenDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2059: syntax error : '<class-head>'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2630: ';' found in what should be a comma-separated list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(4): error C2572: 'AudioHelper::Init' : redefinition of default parameter : parameter 3
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(7) : see declaration of 'AudioHelper::Init'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(4): error C2572: 'AudioHelper::Init' : redefinition of default parameter : parameter 2
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(7) : see declaration of 'AudioHelper::Init'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(4): error C2572: 'AudioHelper::Init' : redefinition of default parameter : parameter 1
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(7) : see declaration of 'AudioHelper::Init'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(6): error C2660: 'GameLog::GetLogger' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(11): error C2664: 'GameLog::LogSdlError' : cannot convert parameter 1 from 'const char [14]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(15): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [37]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(39): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(46): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(50): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(68): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(75): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(79): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(93): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(100): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(120): error C2664: 'GameLog::LogSdlError' : cannot convert parameter 1 from 'const char [12]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(124): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [26]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(137): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'const char [12]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(141): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.cpp(176): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'const char [61]' to 'const int'
+          There is no context in which this conversion is possible
+  MenuItem.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2039: 'vector' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2143: syntax error : missing ';' before '<'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2238: unexpected token(s) preceding ';'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2061: syntax error : identifier 'ostream'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2146: syntax error : missing ';' before identifier 'GetCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): warning C4183: 'GetCaller': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2146: syntax error : missing ';' before identifier 'm_sLogCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(13): error C2065: 'caller' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(35): error C2248: 'GameLog::GameLog' : cannot access protected member declared in class 'GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(26) : see declaration of 'GameLog::GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(5) : see declaration of 'GameLog'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): warning C4183: 'LoadMusic': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): warning C4183: 'LoadSound': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2535: 'void AudioHelper::PlaySound(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13) : see declaration of 'AudioHelper::PlaySound'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2061: syntax error : identifier 'Mix_Music'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C2146: syntax error : missing ';' before identifier 'GetTextDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): warning C4183: 'GetTextDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C2146: syntax error : missing ';' before identifier 'GetTextureDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): warning C4183: 'GetTextureDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C2146: syntax error : missing ';' before identifier 'GetScreenDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): warning C4183: 'GetScreenDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2059: syntax error : '<class-head>'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2630: ';' found in what should be a comma-separated list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\menuitem.cpp(2): fatal error C1083: Cannot open include file: 'MainMenu.h': No such file or directory
+  GameLog.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2039: 'vector' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2143: syntax error : missing ';' before '<'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(57): error C2238: unexpected token(s) preceding ';'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(25): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\baseobject.h(45): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\baseobject.h(45): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(45): error C2146: syntax error : missing ';' before identifier 'logger'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(45): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): warning C4183: 'LoadMusic': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): warning C4183: 'LoadSound': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2535: 'void AudioHelper::PlaySound(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13) : see declaration of 'AudioHelper::PlaySound'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2061: syntax error : identifier 'Mix_Music'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(37): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C2146: syntax error : missing ';' before identifier 'GetTextDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): warning C4183: 'GetTextDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C2146: syntax error : missing ';' before identifier 'GetTextureDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): warning C4183: 'GetTextureDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C2146: syntax error : missing ';' before identifier 'GetScreenDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): warning C4183: 'GetScreenDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2059: syntax error : '<class-head>'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2630: ';' found in what should be a comma-separated list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.cpp(14): error C2572: 'GameLog::Log' : redefinition of default parameter : parameter 2
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8) : see declaration of 'GameLog::Log'
+  GameEngine.cpp
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(7): error C2061: syntax error : identifier 'ostream'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(8): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(9): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(10): error C2143: syntax error : missing ',' before '&'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(18): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C2146: syntax error : missing ';' before identifier 'GetCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(23): warning C4183: 'GetCaller': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2039: 'ostream' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C2146: syntax error : missing ';' before identifier 'm_sLogCaller'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(13): error C2065: 'caller' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(8): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(9): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(11): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(12): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(14): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(15): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(16): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(18): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(20): error C2065: 'game' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(20): error C2227: left of '->ChangeState' must point to class/struct/union/generic type
+          type is ''unknown-type''
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(20): error C2065: 'state' : undeclared identifier
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\baseobject.h(21): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\baseobject.h(22): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(21): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(22): error C2061: syntax error : identifier 'GameEngine'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basestaticobject.h(35): error C2248: 'GameLog::GameLog' : cannot access protected member declared in class 'GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(26) : see declaration of 'GameLog::GameLog'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gamelog.h(5) : see declaration of 'GameLog'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(10): warning C4183: 'LoadMusic': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(11): warning C4183: 'LoadSound': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14): error C2061: syntax error : identifier 'Mix_Chunk'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(16): error C2535: 'void AudioHelper::PlaySound(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(13) : see declaration of 'AudioHelper::PlaySound'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2061: syntax error : identifier 'string'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(17): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2061: syntax error : identifier 'Mix_Music'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(18): error C2535: 'void AudioHelper::PlayMusic(void)' : member function already defined or declared
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(14) : see declaration of 'AudioHelper::PlayMusic'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2039: 'string' : is not a member of 'std'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C2146: syntax error : missing ';' before identifier 'm_sName'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\audiohelper.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(10): error C2590: 'LoadText' : only a constructor can have a base/member initializer list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2969: syntax error : ';' : expected member function definition to end with '}'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C2146: syntax error : missing ';' before identifier 'GetTextDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(14): warning C4183: 'GetTextDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C2146: syntax error : missing ';' before identifier 'GetTextureDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(15): warning C4183: 'GetTextureDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C2146: syntax error : missing ';' before identifier 'GetScreenDimensions'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(16): warning C4183: 'GetScreenDimensions': missing return type; assumed to be a member function returning 'int'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\renderhelper.h(11): error C2059: syntax error : '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2059: syntax error : '<class-head>'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\helper_classes\savehelper.h(9): error C2630: ';' found in what should be a comma-separated list
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C2143: syntax error : missing ';' before '*'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(21): error C2660: 'GameLog::Init' : function does not take 3 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(26): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(31): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [38]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(38): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(43): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [32]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(50): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(55): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [34]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(61): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(66): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [25]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(71): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(76): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [25]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(99): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [54]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(102): error C2039: 'm_sName' : is not a member of 'BaseGameState'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(5) : see declaration of 'BaseGameState'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(137): error C2039: 'm_sName' : is not a member of 'BaseGameState'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(5) : see declaration of 'BaseGameState'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(147): error C2039: 'm_sName' : is not a member of 'BaseGameState'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(5) : see declaration of 'BaseGameState'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(151): error C2660: 'BaseGameState::Pause' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(175): error C2660: 'BaseGameState::Resume' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(179): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'const char [49]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(181): error C2039: 'm_sName' : is not a member of 'BaseGameState'
+          e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\base_classes\basegamestate.h(5) : see declaration of 'BaseGameState'
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(209): error C2660: 'BaseGameState::HandleEvents' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(220): error C2660: 'BaseGameState::Update' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(231): error C2660: 'BaseGameState::Draw' : function does not take 1 arguments
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(277): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [18]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(287): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(290): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [36]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(294): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(302): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [35]' to 'const int'
+          There is no context in which this conversion is possible
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(306): error C2664: 'GameLog::LogError' : cannot convert parameter 1 from 'std::basic_string<_Elem,_Traits,_Alloc>' to 'const int'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Alloc=std::allocator<char>
+          ]
+          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\libraries\cloud storage\dropbox\school\14 - fall 2013\video game production project\module 4\towerdefense\towerdefense\classes\gameengine.cpp(345): error C2664: 'GameLog::Log' : cannot convert parameter 1 from 'const char [21]' to 'const int'
+          There is no context in which this conversion is possible
+  Generating Code...

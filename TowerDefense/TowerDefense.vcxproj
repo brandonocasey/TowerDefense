@@ -10,6 +10,60 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base_classes\BaseGameState.h" />
+    <ClInclude Include="base_classes\BaseObject.h" />
+    <ClInclude Include="base_classes\BaseStaticObject.h" />
+    <ClInclude Include="classes\GameEngine.h" />
+    <ClInclude Include="classes\GameLog.h" />
+    <ClInclude Include="classes\MenuItem.h" />
+    <ClInclude Include="game_classes\Monster.h" />
+    <ClInclude Include="game_classes\Tower.h" />
+    <ClInclude Include="helper_classes\AudioHelper.h" />
+    <ClInclude Include="helper_classes\EventHelper.h" />
+    <ClInclude Include="helper_classes\RenderHelper.h" />
+    <ClInclude Include="helper_classes\SaveHelper.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="classes\GameEngine.cpp" />
+    <ClCompile Include="classes\GameLog.cpp" />
+    <ClCompile Include="classes\MenuItem.cpp" />
+    <ClCompile Include="helper_classes\AudioHelper.cpp" />
+    <ClCompile Include="helper_classes\RenderHelper.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\backgrounds\logo.jpg" />
+    <Image Include="assets\sprites\grass.png" />
+    <Image Include="assets\sprites\monster.gif" />
+    <Image Include="assets\sprites\tower.gif" />
+    <Image Include="assets\sprites\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\libs\libFLAC-8.dll" />
+    <None Include="assets\libs\libfreetype-6.dll" />
+    <None Include="assets\libs\libjpeg-9.dll" />
+    <None Include="assets\libs\libmikmod-2.dll" />
+    <None Include="assets\libs\libmodplug-1.dll" />
+    <None Include="assets\libs\libogg-0.dll" />
+    <None Include="assets\libs\libpng16-16.dll" />
+    <None Include="assets\libs\libtiff-5.dll" />
+    <None Include="assets\libs\libvorbis-0.dll" />
+    <None Include="assets\libs\libvorbisfile-3.dll" />
+    <None Include="assets\libs\libwebp-4.dll" />
+    <None Include="assets\libs\SDL2.dll" />
+    <None Include="assets\libs\SDL2_image.dll" />
+    <None Include="assets\libs\SDL2_mixer.dll" />
+    <None Include="assets\libs\SDL2_net.dll" />
+    <None Include="assets\libs\SDL2_ttf.dll" />
+    <None Include="assets\libs\smpeg2.dll" />
+    <None Include="assets\libs\zlib1.dll" />
+    <None Include="assets\maps\level_1.tmx" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F590DFCB-063A-4F21-9924-DF122B5453D0}</ProjectGuid>
     <RootNamespace>TowerDefense</RootNamespace>
@@ -54,7 +108,7 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_net.lib;SDL2_ttf.lib;SDL2_mixer.lib;TmxParser.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y "$(ProjectDir)libs\*.dll" "$(OutDir)"</Command>
+      <Command>xcopy /y "$(ProjectDir)assets\libs\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy all required dll files to the output directory after a build.</Message>
@@ -74,59 +128,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="GameEngine.cpp" />
-    <ClCompile Include="GameLog.cpp" />
-    <ClCompile Include="Intro.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainMenu.cpp" />
-    <ClCompile Include="MenuItem.cpp" />
-    <ClCompile Include="NewGame.cpp" />
-    <ClCompile Include="Settings.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="BaseGameState.h" />
-    <ClInclude Include="GameEngine.h" />
-    <ClInclude Include="GameLog.h" />
-    <ClInclude Include="Intro.h" />
-    <ClInclude Include="LoadGame.h" />
-    <ClInclude Include="MainMenu.h" />
-    <ClInclude Include="MenuItem.h" />
-    <ClInclude Include="NewGame.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Settings.h" />
-    <ClInclude Include="utils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\README.md" />
-    <None Include="libs\libFLAC-8.dll" />
-    <None Include="libs\libfreetype-6.dll" />
-    <None Include="libs\libjpeg-9.dll" />
-    <None Include="libs\libmikmod-2.dll" />
-    <None Include="libs\libmodplug-1.dll" />
-    <None Include="libs\libogg-0.dll" />
-    <None Include="libs\libpng16-16.dll" />
-    <None Include="libs\libtiff-5.dll" />
-    <None Include="libs\libvorbis-0.dll" />
-    <None Include="libs\libvorbisfile-3.dll" />
-    <None Include="libs\libwebp-4.dll" />
-    <None Include="libs\SDL2.dll" />
-    <None Include="libs\SDL2_image.dll" />
-    <None Include="libs\SDL2_mixer.dll" />
-    <None Include="libs\SDL2_net.dll" />
-    <None Include="libs\SDL2_ttf.dll" />
-    <None Include="libs\smpeg2.dll" />
-    <None Include="libs\zlib1.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="img\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="fonts\SourceSansPro-Regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="TowerDefense.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

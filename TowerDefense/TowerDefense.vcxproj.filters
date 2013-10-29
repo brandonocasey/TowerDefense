@@ -1,167 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="base_classes">
+      <UniqueIdentifier>{5dcc1ac4-a878-47fc-9707-da0c9c6f2e57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="classes">
+      <UniqueIdentifier>{26c6efb7-0473-4a40-9496-34e447614de1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="helper_classes">
+      <UniqueIdentifier>{9c0cf2a0-525d-4360-a428-51990603c68b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\States">
-      <UniqueIdentifier>{9fcb7117-6a0c-416d-9f1b-878d0d6e56ef}</UniqueIdentifier>
+    <Filter Include="game_classes">
+      <UniqueIdentifier>{7efd518e-404e-4048-a578-975b0628c754}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes">
-      <UniqueIdentifier>{19336c1b-abf2-4dd6-b86d-54d13faa2711}</UniqueIdentifier>
+    <Filter Include="assets">
+      <UniqueIdentifier>{b077dbc0-2952-40d8-ad17-3b6768d11a57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\libs">
-      <UniqueIdentifier>{fd1b3e5d-6450-4d7f-b1ff-189982861ea9}</UniqueIdentifier>
+    <Filter Include="assets\fonts">
+      <UniqueIdentifier>{5e11370e-6a81-4041-b594-3abdd57002f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\img">
-      <UniqueIdentifier>{8e98c57f-c637-4860-b579-45e48c8bf48e}</UniqueIdentifier>
+    <Filter Include="assets\libs">
+      <UniqueIdentifier>{518e09a1-05d0-4401-9717-62c2dfab8cd4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\fonts">
-      <UniqueIdentifier>{b8b9c472-3553-4b9d-9bb7-759223a6e3f6}</UniqueIdentifier>
+    <Filter Include="assets\maps">
+      <UniqueIdentifier>{32029311-1f2f-44f0-a720-24d71645dc88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sprites">
+      <UniqueIdentifier>{413122f6-4805-48d9-9dd0-13f1cde9be53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\backgrounds">
+      <UniqueIdentifier>{5f1cc890-9c11-461e-b802-b4dbcfa78d91}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MainMenu.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
-    <ClCompile Include="Intro.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
-    <ClCompile Include="GameEngine.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="GameLog.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuItem.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Settings.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
-    <ClCompile Include="NewGame.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
+    <ClInclude Include="base_classes\BaseGameState.h">
+      <Filter>base_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="base_classes\BaseObject.h">
+      <Filter>base_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="base_classes\BaseStaticObject.h">
+      <Filter>base_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\GameEngine.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\GameLog.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\MenuItem.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="helper_classes\AudioHelper.h">
+      <Filter>helper_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="helper_classes\EventHelper.h">
+      <Filter>helper_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="helper_classes\RenderHelper.h">
+      <Filter>helper_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="helper_classes\SaveHelper.h">
+      <Filter>helper_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="game_classes\Monster.h">
+      <Filter>game_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="game_classes\Tower.h">
+      <Filter>game_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="utils.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenu.h">
-      <Filter>Source Files\States</Filter>
-    </ClInclude>
-    <ClInclude Include="Intro.h">
-      <Filter>Source Files\States</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseGameState.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="GameEngine.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="GameLog.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuItem.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NewGame.h">
-      <Filter>Source Files\States</Filter>
-    </ClInclude>
-    <ClInclude Include="LoadGame.h">
-      <Filter>Source Files\States</Filter>
-    </ClInclude>
-    <ClInclude Include="Settings.h">
-      <Filter>Source Files\States</Filter>
-    </ClInclude>
+    <ClCompile Include="classes\GameEngine.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\GameLog.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\MenuItem.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="helper_classes\AudioHelper.cpp">
+      <Filter>helper_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="helper_classes\RenderHelper.cpp">
+      <Filter>helper_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\README.md">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="libs\libFLAC-8.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libfreetype-6.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libjpeg-9.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libmikmod-2.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libmodplug-1.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libogg-0.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libpng16-16.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libtiff-5.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libvorbis-0.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libvorbisfile-3.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\libwebp-4.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\SDL2.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\SDL2_image.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\SDL2_mixer.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\SDL2_net.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\SDL2_ttf.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\smpeg2.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-    <None Include="libs\zlib1.dll">
-      <Filter>Resource Files\libs</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="img\logo.jpg">
-      <Filter>Resource Files\img</Filter>
+    <Image Include="assets\backgrounds\logo.jpg">
+      <Filter>assets\backgrounds</Filter>
+    </Image>
+    <Image Include="assets\sprites\grass.png">
+      <Filter>assets\sprites</Filter>
+    </Image>
+    <Image Include="assets\sprites\monster.gif">
+      <Filter>assets\sprites</Filter>
+    </Image>
+    <Image Include="assets\sprites\tower.gif">
+      <Filter>assets\sprites</Filter>
+    </Image>
+    <Image Include="assets\sprites\wall.png">
+      <Filter>assets\sprites</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="fonts\SourceSansPro-Regular.ttf">
-      <Filter>Resource Files\fonts</Filter>
+    <Font Include="assets\fonts\SourceSansPro-Regular.ttf">
+      <Filter>assets\fonts</Filter>
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TowerDefense.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <None Include="assets\libs\libFLAC-8.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libfreetype-6.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libjpeg-9.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libmikmod-2.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libmodplug-1.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libogg-0.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libpng16-16.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libtiff-5.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libvorbis-0.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libvorbisfile-3.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\libwebp-4.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\SDL2.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\SDL2_image.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\SDL2_mixer.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\SDL2_net.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\SDL2_ttf.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\smpeg2.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\libs\zlib1.dll">
+      <Filter>assets\libs</Filter>
+    </None>
+    <None Include="assets\maps\level_1.tmx">
+      <Filter>assets\maps</Filter>
+    </None>
   </ItemGroup>
 </Project>
